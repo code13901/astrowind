@@ -3,7 +3,7 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'AboutUS',
+      text: 'About US',
       links: [
         {
           text: 'Dr. Ketan Ginoya',
@@ -79,10 +79,6 @@ export const headerData = {
       text: 'Before/After',
           href: './before-after',
       
-    },
-    {
-      text: 'ContactUs',
-      href: './contact',
     },
   ],
   actions: [{ text: 'Contact Us', href: getPermalink('/contact'), target: '_blank' }],
