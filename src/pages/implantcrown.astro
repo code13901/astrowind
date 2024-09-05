@@ -1,0 +1,187 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Implant Crowns and Implant-Supported Bridges in Dunwoody, Chamblee, Atlanta, Sandy Springs',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Implant Crowns and Implant-Supported Bridges"
+    title="Restore Your Smile with Implant Crowns and Bridges"
+    subtitle="At Life Dental in Dunwoody, we offer advanced solutions for tooth replacement through implant crowns and implant-supported bridges. Whether you’re missing a single tooth or several teeth, these treatments provide a long-lasting, natural-looking solution to help restore your confidence and oral health."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/implant_crowns_bridges.png',
+      alt: 'Implant Crowns and Bridges',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'What is an Implant Crown?',
+      description:
+        'An implant crown is a single tooth replacement that is supported by a dental implant. After a titanium implant post is surgically placed into your jawbone, a custom-made crown is attached to the implant, restoring both the function and appearance of the missing tooth. Implant crowns are designed to look and feel like your natural teeth, providing a seamless and durable solution.',
+    },
+    {
+      title: 'What is an Implant-Supported Bridge?',
+      description:
+        'An implant-supported bridge is used to replace multiple missing teeth. Rather than placing individual implants for each missing tooth, two or more implants are strategically placed to support a dental bridge. The bridge consists of crowns that span the gap, supported by the implants at either end. This solution is ideal for patients who are missing several teeth in a row.',
+    },
+    {
+      title: 'Why Choose Dental Implants?',
+      description:
+        'Dental implants are the gold standard for tooth replacement because they offer superior stability and longevity compared to traditional bridges or dentures. They mimic natural tooth roots, providing a secure foundation for crowns or bridges, and they help prevent bone loss in the jaw, which can occur after tooth loss.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Explore the Benefits of Implant Crowns and Bridges</h3>
+      <p>If you’re missing one or more teeth, implant-supported restorations offer a durable, aesthetic, and functional solution. Here’s why so many patients at Life Dental are choosing implant crowns and bridges:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Benefits of Implant Crowns',
+        description:
+          'Implant crowns provide a permanent replacement for a single missing tooth. The implant post fuses with your jawbone, creating a secure and stable foundation for the crown. This eliminates the need to alter adjacent healthy teeth (as with traditional bridges), and the custom-made crown looks and functions like a natural tooth.',
+      },
+      {
+        title: 'Benefits of Implant-Supported Bridges',
+        description:
+          'If you’re missing multiple teeth, an implant-supported bridge is an excellent option. This treatment prevents the need for individual implants for each missing tooth, making it a more cost-effective and minimally invasive solution. The implants provide the stability that a traditional bridge lacks, and they help prevent bone loss in the areas where teeth are missing.',
+      },
+      {
+        title: 'Longevity and Durability',
+        description:
+          'Both implant crowns and bridges are designed to be long-lasting. With proper care, these restorations can last decades, providing a permanent solution to tooth loss. The materials used—such as porcelain or ceramic—are highly durable, resistant to stains, and can withstand normal biting forces.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/implant_crowns_benefits.png',
+      alt: 'Benefits of Implant Crowns and Bridges',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose Implant Crowns and Bridges?</h3>
+      <p>Implant-supported restorations are considered the most effective solution for tooth replacement. Whether you need a single tooth replaced or are missing several teeth, implant crowns and bridges offer unparalleled stability, longevity, and aesthetics.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How Does the Implant Procedure Work?</h3>
+  <div>
+  The implant procedure typically begins with a comprehensive consultation, where we assess your oral health and take X-rays or digital images to determine the best implant placement. The dental implant is surgically placed into your jawbone, and after a healing period (typically 3-4 months), the implant fuses with the bone in a process called osseointegration. Once the implant has healed, the custom-made crown or bridge is attached to the implant post.
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Initial Consultation</strong>: Your dentist will evaluate your teeth and gums, and discuss your smile goals. If implants are suitable for you, imaging will be done to create a treatment plan.</li>
+    <li><strong>Surgical Placement</strong>: The implant post is surgically placed into the jawbone. This post acts as the foundation for the crown or bridge.</li>
+    <li><strong>Healing Period</strong>: After the implant is placed, the bone will need time to fuse with the implant. This healing process can take several months.</li>
+    <li><strong>Final Restoration</strong>: Once healed, the final crown or bridge is attached to the implant, completing your new, natural-looking smile.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Who is a Candidate for Dental Implants?',
+        description:
+        'Dental implants are an excellent option for patients with healthy gums and sufficient bone density to support the implant post. However, patients with bone loss may still be candidates after undergoing bone grafting procedures. Ideal candidates are committed to maintaining good oral hygiene and attending regular dental visits.',
+      },
+      {
+        title: 'Implants for Multiple Missing Teeth',
+        description:
+        'For patients missing multiple teeth, implant-supported bridges are a great alternative to partial dentures or traditional bridges. They provide stability, comfort, and a natural appearance without the need for adhesives or metal clasps.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/implant_candidates.png',
+      alt: 'Dental Implant Candidates',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Are You a Candidate for Dental Implants?</h3>
+      <p>If you’re considering implants, you may be wondering whether you’re a suitable candidate. Factors like bone density, oral health, and lifestyle choices will determine if dental implants are the best option for you. Learn more about whether implants are right for you at Life Dental.</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Implant Crowns vs. Traditional Bridges',
+    description:
+      'Unlike traditional bridges, which rely on adjacent teeth for support, implant crowns and bridges are anchored directly to the jawbone. This means there is no need to alter or damage healthy teeth, and the implant provides a more secure and durable solution.',
+  },
+  {
+    title: 'Implant-Supported Bridges vs. Dentures',
+    description:
+      'Implant-supported bridges offer superior comfort and functionality compared to partial dentures. Dentures can shift or slip, but implant-supported bridges remain securely in place, providing a stable foundation for chewing, speaking, and smiling confidently.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Implant Crowns vs. Traditional Restorations</h3>
+<p>
+Implant-supported crowns and bridges offer a long-term, secure solution compared to traditional bridges or dentures. Learn more about how these restorations stack up against other tooth replacement options at Life Dental.
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
+    ]}
+  />
+  
+</Layout>

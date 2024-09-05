@@ -1,0 +1,105 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Life.Dental Savings Plan in Dunwoody, GA',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Life.Dental Savings Plan"
+    title="Affordable Dental Care for You and Your Family"
+    subtitle="Life.Dental offers an exclusive savings plan for patients without dental insurance. Our in-house plan helps you save on routine cleanings, exams, and other essential dental treatments, ensuring your family receives the best care at a fraction of the cost."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Join Our Plan Today', href: '/contact' }]}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'What is the Life.Dental Savings Plan?',
+      description:
+        'The Life.Dental Savings Plan is an in-house dental savings program designed for patients without insurance coverage. For one affordable annual fee, you’ll receive preventive care services like cleanings, exams, and X-rays, along with discounted rates on other dental treatments. With no deductibles, no waiting periods, and no annual maximums, this plan makes it easier for individuals and families to maintain their oral health without breaking the bank.',
+    },
+    {
+      title: 'Why Choose Our Dental Savings Plan?',
+      description:
+        'Unlike traditional dental insurance, the Life.Dental Savings Plan is simple and transparent. There are no claim forms, denials, or hidden fees. You get full access to quality care at discounted rates, ensuring you and your family can afford the treatment you need when you need it. Plus, you can start using the plan immediately after signing up.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Affordable Dental Care without Insurance</h3>
+      <p>Our plan is perfect for patients who want excellent dental care without the hassle of traditional insurance plans. You get predictable costs and discounted rates with no annual caps.</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'What’s Included in the Life.Dental Savings Plan?',
+        description:
+          '<ul><li><strong>2 Routine Cleanings per Year</strong>: Stay on top of your oral health with two professional cleanings annually.</li><li><strong>2 Comprehensive Dental Exams</strong>: Our team will thoroughly examine your teeth and gums to catch potential problems early.</li><li><strong>Routine X-rays</strong>: Diagnostic X-rays are included to help identify any hidden issues.</li><li><strong>Fluoride Treatments</strong>: Fluoride application to strengthen your enamel and prevent decay (for children and adults).</li><li><strong>Discounts on Other Dental Services</strong>: Get 15%-20% off additional treatments, including fillings, crowns, extractions, and cosmetic procedures like teeth whitening and veneers.</li></ul>',
+      },
+      {
+        title: 'How Much Does the Plan Cost?',
+        description:
+          '<ul><li><strong>Individual Plan</strong>: $399/year</li><li><strong>Couple Plan</strong>: $749/year</li><li><strong>Family Plan</strong>: $999/year (for up to four family members)</li><li><strong>Additional Family Member</strong>: $200/year</li></ul><br> With no hidden fees, your costs are clear from day one. You can start saving on essential dental treatments right away.',
+      },
+      {
+        title: 'Who Can Join the Life.Dental Savings Plan?',
+        description:
+          'Our plan is available to all patients, whether you’re an existing patient or new to our practice. The Life.Dental Savings Plan is ideal for individuals, couples, and families looking to save on dental care without the hassle of traditional insurance. Best of all, there are no age limits, exclusions, or pre-approvals required!',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Everything You Need for a Healthy Smile</h3>
+      <p>With the Life.Dental Savings Plan, you can enjoy comprehensive dental care at an affordable rate. Our goal is to help you keep your teeth and gums healthy, and with our plan, it’s easier than ever to stay on top of preventive care while saving on more extensive treatments.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How to Join the Life.Dental Savings Plan</h3>
+  <div>
+  Becoming a member of the Life.Dental Savings Plan is simple and hassle-free:
+  <ol class="list-decimal ml-6">
+  <li>Call or visit our office to sign up.</li>
+  <li>Choose the plan that fits your needs (Individual, Couple, or Family).</li>
+  <li>Pay the one-time annual membership fee.</li>
+  <li>Start saving immediately on your dental treatments!</li>
+  </ol>
+  </div>
+  <br/>
+  <div>
+  There are no waiting periods, and you can begin using your savings plan as soon as you sign up. We are here to help answer any questions and guide you through the process.
+  </div>
+  </Fragment>
+  </Content>
+
+  <!-- Call to Action **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ready to Save on Your Dental Care?</h3>
+  <div>
+  Join the Life.Dental Savings Plan today and start saving on your dental care needs. Call us at <a href="tel:+1-404-806-9799" style="display: inline-block; padding: 10px 20px; background-color: #7b80e4;; color: white; text-decoration: none; font-weight: bold; border-radius: 5px;">404-806-9799</a>
+ or visit our office to get started. Whether you’re looking for routine care or more extensive treatments, we’re here to make dental care affordable and accessible for you and your family.
+  </div>
+  </Fragment>
+  </Content>
+
+</Layout>

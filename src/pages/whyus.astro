@@ -1,0 +1,130 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Why Choose Dr. Ketan Ginoya and Life Dental in Dunwoody',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Why Choose Us?"
+    title="Your Smile Deserves Expert Care with a Personal Touch"
+    subtitle="At Life Dental, Dr. Ketan Ginoya and our experienced team are committed to providing personalized, comprehensive dental care in Dunwoody. Whether you need preventive care, cosmetic treatments, or restorative solutions, you can trust us to deliver high-quality care tailored to your needs."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'Expertise You Can Trust',
+      description:
+        'Dr. Ketan Ginoya is a highly skilled and compassionate dentist with over a decade of experience in delivering exceptional dental care. After graduating with honors from Boston University’s Goldman School of Dental Medicine, Dr. Ginoya has dedicated his career to mastering various aspects of dentistry. With certifications from leading institutions such as the Kois Center and advanced training in dental implants, esthetic dentistry, and more, Dr. Ginoya stays at the forefront of dental innovations to ensure the best care for his patients.',
+    },
+    {
+      title: 'Comprehensive Care, All in One Place',
+      description:
+        'At Life Dental, we are proud to offer a wide range of dental services under one roof. From preventive care and routine checkups to advanced treatments like dental implants, cosmetic dentistry, and full-mouth reconstructions, you won’t need to visit multiple specialists. Dr. Ginoya’s experience spans across various dental procedures, meaning you receive all the care you need in one convenient location with a dentist you trust.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Explore the Benefits of Implant Crowns and Bridges</h3>
+      <p>If you’re missing one or more teeth, implant-supported restorations offer a durable, aesthetic, and functional solution. Here’s why so many patients at Life Dental are choosing implant crowns and bridges:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Personalized Treatment Plans',
+        description:
+          'No two patients are the same, and we believe your dental care should reflect that. At Life Dental, we don’t follow a one-size-fits-all approach. Dr. Ginoya takes the time to understand your specific needs, preferences, and concerns, creating a customized treatment plan designed to help you achieve your smile goals. We explain all options thoroughly so that you can make informed decisions about your dental health.',
+      },
+      {
+        title: 'Advanced Training & Lifelong Learning',
+        description:
+          'Dr. Ginoya is a lifelong learner who is committed to advancing his skills through continuing education. With certifications from esteemed institutions like the Kois Center and training in advanced procedures such as bone grafting, maxillary sinus augmentation, and zygomatic implants, you can trust that your treatment is in the hands of a knowledgeable and skilled expert.',
+      },
+      {
+        title: 'State-of-the-Art Technology & Materials',
+        description:
+          'At Life Dental, we use the latest technology and high-quality materials to ensure that you receive the best possible care. From digital imaging to advanced treatment techniques, we stay at the cutting edge of dental advancements to provide more accurate diagnoses, better treatment outcomes, and a more comfortable experience for you. We also work with top dental labs to deliver results that look and feel natural.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Makes Life Dental Different?</h3>
+      <p>Our commitment to advanced dental care and patient-centered service sets us apart. From the moment you walk into Life Dental, you’ll experience a welcoming, professional environment where your comfort and care are our top priorities.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Caring and Compassionate Dental Team</h3>
+  <div>
+  Dr. Ketan Ginoya and the Life Dental team genuinely care about your health and happiness. We believe that building strong patient relationships is key to providing excellent care. Whether you’re coming in for a routine cleaning or a more complex procedure, we take the time to listen to your concerns, explain your options, and ensure that you feel confident and comfortable throughout your visit.
+  </div>
+  <br/>
+  <div>
+  We understand that visiting the dentist can sometimes be stressful. That’s why we strive to create a relaxing, anxiety-free environment, where every member of our team is dedicated to making your visit as pleasant as possible.
+  </div>
+  </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+<Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
+    ]}
+  />
+
+  <!-- Call to Action **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contact Us Today!</h3>
+  <div>
+  Whether you’re in need of a routine check-up, cosmetic dentistry, or restorative treatment, Life Dental is here for you. Schedule a consultation with Dr. Ketan Ginoya today, and take the first step towards a healthier, more confident smile.
+  </div>
+  </Fragment>
+  </Content>
+
+</Layout>

@@ -1,0 +1,214 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dental Implants in Dunwoody, Chamblee, Sandy Springs, Atlanta',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Dental Implants"
+    title="Restore Your Smile with Dental Implants – The Permanent Solution for Missing Teeth"
+    subtitle="Dental implants are the most effective and permanent solution to missing teeth. At our practice, we offer state-of-the-art dental implant procedures that look, feel, and function like your natural teeth. Whether you've lost teeth due to decay, injury, or aging, dental implants can help restore both your smile and your confidence. Located in Dunwoody suburb of metro Atlanta area, we specialize in providing expert dental implant care in a warm and welcoming environment. Take the first step toward a more confident smile today."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/dental_implants.png',
+      alt: 'Dental Implants',
+    }}
+  />
+
+  
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'What Are Dental Implants?',
+      description:
+        'Dental implants are titanium posts that are surgically placed into the jawbone, providing a sturdy foundation for replacement teeth. They fuse with the bone to create a secure and long-lasting solution for missing teeth. Unlike dentures or bridges, implants function like your natural teeth, allowing you to eat, speak, and smile with confidence.',
+    },
+    {
+      title: 'Why Choose Dental Implants?',
+      description:
+        'Dental implants offer numerous advantages over other tooth replacement options. They prevent bone loss, maintain facial structure, and are incredibly durable. Implants do not require altering nearby teeth, which means they preserve your natural tooth structure. They are also comfortable, stable, and indistinguishable from natural teeth.',
+    },
+    {
+      title: 'Types of Dental Implants',
+      description:
+        'Depending on your needs and jawbone condition, you may be a candidate for one of several types of dental implants: Endosteal implants (placed directly in the bone), Subperiosteal implants (placed on top of the jawbone), or All-on-4 implants (supporting a full arch of teeth). Your dentist will determine the best option based on your unique situation.',
+    },
+    {
+      title: 'Am I a Candidate for Dental Implants?',
+      description:
+        'Not everyone is an immediate candidate for dental implants. You need to have healthy gums and enough bone structure to support the implant. If your jawbone has deteriorated, a bone graft may be necessary. People with certain conditions like uncontrolled diabetes or heavy smokers may need additional treatment or alternatives. [Learn more about bone grafting](#).',
+    },
+  ]}
+
+>
+
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Are Dental Implants and Are They Right for You?</h3>
+      <p>Dental implants are a permanent, effective way to replace missing teeth and restore your smile. Here's why implants are often the best choice for many patients:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'The Dental Implant Process: Step-by-Step',
+        description:
+          'The dental implant process typically occurs in multiple stages. First, the implant is surgically placed into the jawbone, then allowed to heal and integrate with the bone (a process called osseointegration). Once healed, an abutment is placed on the implant, followed by a custom-made crown to complete the restoration.',
+      },
+      {
+        title: 'Initial Consultation',
+        description:
+          'During your first consultation, your dentist will evaluate your oral health and determine if you’re a good candidate for implants. This may include X-rays or a 3D scan of your jaw to assess bone structure and identify potential issues like gum disease.',
+      },
+      {
+        title: 'Implant Placement',
+        description:
+          'In this phase, the dental implant post is surgically placed into your jawbone. This procedure is typically done under local anesthesia and is designed to be as comfortable as possible. Post-procedure, the healing process begins as the implant integrates with the bone.',
+      },
+      {
+        title: 'Healing and Crown Placement',
+        description:
+        "Once the implant has fused with the bone, the next step is placing the abutment and then the custom-made crown. This crown will be created to match the shape, color, and size of your surrounding teeth for a natural look."
+      },
+    ]}
+    image={{
+      src: '~/assets/images/implant_process.png',
+      alt: 'Dental Implant Process',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Understanding the Dental Implant Process</h3>
+      <p>Getting a dental implant is a multi-step process that takes time to complete but yields permanent and reliable results. Here's what you can expect during each stage of treatment:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Long-Term Benefits of Dental Implants</h3>
+  <div>
+  Dental implants provide long-lasting benefits that improve both your oral health and quality of life. Here are the key benefits of choosing dental implants:
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Durability</strong>: With proper care, dental implants can last a lifetime, making them a cost-effective, long-term solution for tooth loss.</li>
+    <li><strong>Improved Confidence</strong>: Implants allow you to speak, smile, and eat without worrying about discomfort or slippage.</li>
+    <li><strong>Preserved Bone Health</strong>: Implants prevent bone loss by stimulating the jawbone, maintaining facial structure and preventing the sunken appearance that can come with missing teeth.</li>
+    <li><strong>Enhanced Aesthetics</strong>: Implants look and feel like natural teeth, improving your smile and self-esteem.</li>
+    <li><strong>Functionality</strong>: Unlike removable dentures, dental implants provide full chewing power, allowing you to enjoy all types of food.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+<Content
+    isAfterContent
+    items={[
+      {
+        title: 'Caring for Your Dental Implants',
+        description:
+        'Proper care is essential to the longevity of your implants. Regular brushing, flossing, and routine checkups with your dentist will help keep your implants in excellent condition. Just like natural teeth, dental implants require good oral hygiene to prevent gum disease or infection.'
+      },
+      {
+        title: 'Avoid Hard Foods',
+        description:
+        'Although implants are strong, chewing ice, hard candies, or other tough objects can damage the crown or implant. Stick to softer foods during the healing process, and avoid habits like chewing on pens or fingernails.',
+      },
+      {
+        title: 'Quit Smoking',
+        description:
+        'Smoking can significantly impact the healing process and increase the likelihood of implant failure. If you smoke, it’s highly recommended that you quit before undergoing the implant procedure to ensure the best results.',
+      },
+    ]}
+  image={{
+    src: '~/assets/images/caring_for_implants.png',
+    alt: 'Caring for Dental Implants',
+  }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How to Care for Your Dental Implants</h3>
+      <p>Dental implants require care just like your natural teeth. By following a proper oral hygiene routine, you can ensure that your implants last a lifetime.</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Are There Risks with Dental Implants?',
+    description:
+      'While dental implants have a high success rate, complications can occur. These may include infection, implant failure, or nerve damage. Your dentist will discuss these risks with you during your consultation to ensure you make an informed decision.',
+  },
+  {
+    title: 'Implant Longevity',
+    description:
+      'The longevity of your dental implants depends on several factors, including your oral hygiene habits and overall health. However, most implants last several decades with proper care, making them a durable and reliable solution for tooth replacement.',
+  },
+  {
+    title: 'Regular Dental Visits',
+    description:
+      'It’s important to see your dentist regularly for implant checkups and cleanings. Your dentist will monitor the condition of the implant and ensure that your surrounding gums and bone remain healthy.',
+  },
+]}
+
+   
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Potential Risks and the Longevity of Dental Implants</h3>
+<p>
+Dental implants are a highly successful procedure, but like any surgery, there are potential risks. Understanding these risks and how to maintain your implants is key to long-term success:
+</p>
+    </Fragment>
+  </Content>
+<div class="text-md tracking-tight dark:text-white sm:text-xl m-16 text-justify ">
+Your dental implants are designed to last a lifetime, but the key to success lies in maintaining good oral hygiene and attending regular dental checkups.
+</div>
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what our patients have to say about their dental implant experience."
+    testimonials={[
+      {
+        testimonial: `The implant process was much easier than I anticipated. I now have my smile back and couldn’t be happier.`,
+        name: 'Sarah',
+        image: {
+          alt: 'Sarah',
+        },
+      },
+      {
+        testimonial: `After losing a tooth in an accident, I was nervous about getting an implant. The staff made me feel comfortable and walked me through every step.`,
+        name: 'Mark',
+        image: {
+          alt: 'Mark',
+        },
+      },
+      {
+        testimonial: `I had several implants done, and the results are amazing. They look and feel just like my natural teeth.`,
+        name: 'Jessica',
+        image: {
+          alt: 'Jessica',
+        },
+      },
+   
+    ]}
+  />
+  
+
+</Layout>

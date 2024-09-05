@@ -1,0 +1,180 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'All-on-X Dental Implants in Dunwoody, Chamblee, Atlanta, Sandy Springs',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="All-on-X Dental Implants"
+    title="Restore Your Smile Permanently with All-on-X Dental Implants"
+    subtitle="All-on-X dental implants offer a modern, long-lasting solution to tooth loss. At Life Dental in Dunwoody, we specialize in the All-on-4 and All-on-6 implant systems. These treatments provide you with a stable, natural-looking smile that is securely attached to your jawbone—so you can enjoy the benefits of a permanent smile without the hassle of traditional dentures."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/all_on_x_dental_implants.png',
+      alt: 'All-on-X Dental Implants',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'What is All-on-X Dental Implant Treatment?',
+      description:
+        'All-on-X dental implant treatment is a revolutionary procedure where four or more implants are placed in your jawbone to support a full arch of replacement teeth. This technique offers an excellent alternative to traditional dentures and implant-supported overdentures by providing a fixed, non-removable solution. You won’t have to worry about slipping dentures or applying adhesive cream—the hybrid denture is securely anchored to your jaw with implants.',
+    },
+    {
+      title: 'How Does All-on-4 or All-on-6 Work?',
+      description:
+        'In All-on-4 or All-on-6 treatments, 4 to 6 implants are strategically placed in the jaw to support a fixed dental prosthesis. A framework is then secured to these implants, and the artificial teeth are attached to this framework. This gives you a full arch of teeth that are stable, comfortable, and natural-looking, allowing you to enjoy all your daily activities without the worry of dentures shifting or falling out.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Achieve a Permanent, Secure Smile with All-on-X</h3>
+      <p>All-on-X dental implants offer a transformative solution for patients who are missing multiple teeth. Whether you’ve experienced tooth loss due to decay, gum disease, or injury, this advanced treatment can restore both the function and beauty of your smile. Here’s why it’s a great choice:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'The Benefits of All-on-X Hybrid Dentures',
+        description:
+          'One of the most significant advantages of All-on-X is that the dentures are fixed in place, eliminating the need for messy adhesives or concerns about dentures slipping out. With no material covering the roof of your mouth (palate), you’ll enjoy improved speech, better tasting food, and a more comfortable fit compared to traditional dentures.',
+      },
+      {
+        title: 'Improved Aesthetics and Confidence',
+        description:
+          'With the snug fit of the hybrid denture, your smile will look natural, and the improved facial support can even enhance your appearance. Plus, the security of a fixed denture gives you the confidence to smile, speak, and chew without fear of your teeth moving.',
+      },
+      {
+        title: 'Durable Materials',
+        description:
+          'All-on-X hybrid bridges are built to last. The implants are made of biocompatible titanium, and the prosthetic teeth are crafted from durable materials like acrylic or porcelain, which can mimic the look and feel of natural teeth.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/all_on_x_benefits.png',
+      alt: 'Benefits of All-on-X Implants',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose All-on-X for Your Smile?</h3>
+      <p>All-on-X implants provide a permanent, aesthetic solution for those who want a fixed, natural-looking smile. Here’s why patients in Dunwoody are choosing this advanced treatment:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What’s the Difference Between All-on-X and Implant-Supported Overdentures?</h3>
+  <div>
+  While both All-on-X and implant-supported overdentures use dental implants, they differ in how the prosthetic teeth are attached. All-on-X provides a fixed denture, while implant-supported overdentures can be removed for cleaning. Both options offer stability, but All-on-X offers the advantage of being a permanent solution, with no need to remove the denture.
+  </div>
+  <br/>
+  <ul>
+    <li><strong>All-on-X Hybrid Dentures</strong>: The denture is fixed permanently and is not removed. This offers the closest alternative to natural teeth in terms of function, stability, and aesthetics.</li>
+    <li><strong>Implant-Supported Overdenture</strong>: A removable option that uses 2-4 implants with locator attachments to snap the denture into place. This provides more stability than traditional dentures but requires daily removal for cleaning.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'The All-on-X Procedure: Step-by-Step',
+        description:
+        'The All-on-X procedure typically starts with a comprehensive consultation, including X-rays and digital imaging to determine the best implant placement. The implants are surgically placed into your jawbone, and after a healing period of 3-4 months, your permanent hybrid denture is secured to the implants.',
+      },
+      {
+        title: 'How Long Does Recovery Take?',
+        description:
+        'While the recovery process varies depending on your overall health, most patients can expect initial healing within a few days to a week. Full integration of the implants with your jawbone (osseointegration) takes about 3-4 months.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/all_on_x_procedure.png',
+      alt: 'All-on-X Procedure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The All-on-X Dental Implant Procedure</h3>
+      <p>The All-on-X procedure is a straightforward process that involves implant placement, healing, and final restoration. Learn more about what to expect during each phase of your treatment:</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Are You a Candidate for All-on-X Dental Implants?',
+    description:
+      'Patients who have experienced significant tooth loss and want a permanent, stable solution may be good candidates for All-on-X implants. Adequate bone density is important for the success of the implants, but bone grafting is available for those who may need additional support.',
+  },
+  {
+    title: 'Maintenance and Care for All-on-X Implants',
+    description:
+      'While All-on-X implants are permanent, they still require regular maintenance. You’ll need to visit our office every 6 months for professional cleaning and checkups to ensure your hybrid denture remains in perfect condition.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Is All-on-X Right for You?</h3>
+<p>
+All-on-X dental implants offer an advanced, permanent solution for patients who want a stable and aesthetic full-arch restoration. Find out if this treatment is the right choice for your smile at Life Dental in Dunwoody.
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient Testimonials"
+    subtitle="Hear from patients who’ve transformed their smiles with All-on-X dental implants."
+    testimonials={[
+      {
+        testimonial: `The All-on-4 treatment has completely changed my life. My new teeth feel natural, and I can eat and speak with confidence again!`,
+        name: 'Michael',
+        image: {
+          alt: 'Michael',
+        },
+      },
+      {
+        testimonial: `I chose All-on-6 implants for my upper arch, and the results have been amazing. The process was smooth, and the team at Life Dental made me feel so comfortable throughout the treatment.`,
+        name: 'Susan',
+        image: {
+          alt: 'Susan',
+        },
+      },
+      {
+        testimonial: `I was nervous about the idea of implants, but the All-on-X procedure was so easy. Now, I don’t have to worry about my dentures slipping, and I can finally enjoy my favorite foods.`,
+        name: 'David',
+        image: {
+          alt: 'David',
+        },
+      },
+   
+    ]}
+  />
+  
+</Layout>

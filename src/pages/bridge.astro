@@ -1,0 +1,197 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Fixed Dental Bridge in Dunwoody, Chamblee, Atlanta, Sandy Springs',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Fixed Dental Bridge"
+    title="Restore Your Smile and Confidence with Fixed Dental Bridges"
+    subtitle="Missing teeth can affect not only your smile but also your ability to eat, speak, and maintain oral health. At our practice, we offer custom fixed dental bridges to replace missing teeth, restoring both function and aesthetics. A fixed dental bridge provides a long-lasting solution, anchored securely by adjacent natural teeth or dental implants. With our skilled team and advanced dental technology, we can help you regain your confidence and improve your quality of life."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/fixed_dental_bridge.png',
+      alt: 'Fixed Dental Bridge',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}
+  items={[
+    {
+      title: 'What is a Fixed Dental Bridge?',
+      description:
+        'A fixed dental bridge is a dental restoration used to replace one or more missing teeth by anchoring an artificial tooth (or teeth) between two crowns placed on the adjacent natural teeth or dental implants. This bridge is permanently bonded and can only be removed by a dentist. Fixed bridges restore not only your smile but also your ability to chew, speak, and maintain proper facial structure.',
+    },
+    {
+      title: 'Types of Fixed Bridges',
+      description:
+        'There are various types of fixed dental bridges, including traditional bridges, cantilever bridges, and Maryland bridges. Each type is suited to different situations depending on where the missing tooth is located and the condition of the surrounding teeth. Your dentist will recommend the most suitable option for you based on your specific needs.',
+    },
+    {
+      title: 'Who is a Candidate for a Fixed Bridge?',
+      description:
+        'If you have one or more missing teeth but have healthy teeth or implants on either side of the gap, you may be a good candidate for a fixed bridge. Good oral hygiene and healthy gum tissue are also essential for the long-term success of a bridge.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose a Fixed Dental Bridge?</h3>
+      <p>A fixed dental bridge is an effective solution for replacing missing teeth. Here are some key benefits of choosing a fixed bridge:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Restores Functionality',
+        description:
+          'A fixed bridge restores your ability to chew and speak normally. Missing teeth can cause difficulty in biting and chewing, and may even affect your speech. With a fixed bridge, you can eat and talk as if you never lost a tooth.',
+      },
+      {
+        title: 'Prevents Shifting of Teeth',
+        description:
+          'When you lose a tooth, the adjacent teeth can shift into the gap, causing misalignment and bite problems. A fixed bridge fills the gap, preventing surrounding teeth from shifting out of position.',
+      },
+      {
+        title: 'Maintains Facial Structure',
+        description:
+          'Missing teeth can lead to bone loss in the jaw and changes in facial structure. A fixed bridge helps maintain the integrity of your facial appearance by supporting your jawbone and preventing it from deteriorating.',
+      },
+      {
+        title: 'Aesthetic Appeal',
+        description:
+          'Bridges are custom-made to match the size, shape, and color of your natural teeth. They blend seamlessly with your smile, improving the appearance of your teeth while boosting your self-confidence.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/fixed_bridge_benefits.png',
+      alt: 'Fixed Dental Bridge Benefits',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits of Fixed Dental Bridges</h3>
+      <p>From restoring functionality to enhancing your appearance, fixed dental bridges offer a range of benefits that can improve your oral health and quality of life:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Process of Getting a Fixed Dental Bridge</h3>
+  <div>
+  The procedure to receive a fixed dental bridge involves several steps, typically completed over two or more visits. Here’s what to expect:
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Initial Consultation</strong>: Your dentist will evaluate your oral health and determine if a fixed bridge is right for you. This may involve X-rays and digital scans of your teeth to assess the condition of the abutment teeth (supporting teeth).</li>
+    <li><strong>Tooth Preparation</strong>: The abutment teeth are reshaped to make room for the crowns that will hold the bridge in place. A mold or digital impression is taken to create a custom-fit bridge.</li>
+    <li><strong>Temporary Bridge</strong>: While your permanent bridge is being fabricated, a temporary bridge is placed to protect the abutment teeth and gums.</li>
+    <li><strong>Final Placement</strong>: Once your permanent bridge is ready, your dentist will fit and cement it in place. Adjustments will be made to ensure the perfect fit and comfort.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Brushing and Flossing',
+        description:
+        'Keep your bridge and surrounding teeth clean by brushing twice a day with fluoride toothpaste. Special floss or floss threaders can help you clean under the bridge and prevent plaque buildup.',
+      },
+      {
+        title: 'Routine Dental Visits',
+        description:
+        'Regular dental checkups and professional cleanings are essential to maintaining your bridge. Your dentist will monitor the condition of your bridge and ensure that the supporting teeth remain healthy.',
+      },
+      {
+        title: 'Avoid Hard Foods',
+        description:
+        'While bridges are durable, biting down on hard foods can damage them. Stick to softer foods during the healing process and avoid chewing on hard objects like ice or candy.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/caring_for_fixed_bridge.png',
+      alt: 'Caring for Your Fixed Dental Bridge',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Caring for Your Fixed Dental Bridge</h3>
+      <p>Proper care of your fixed dental bridge is essential for its longevity. Follow these tips to ensure your bridge lasts as long as possible:</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Cost of a Fixed Dental Bridge',
+    description:
+      'The cost of a fixed dental bridge depends on several factors, including the number of teeth being replaced, the materials used, and the complexity of the procedure. Fixed bridges are generally more affordable than dental implants, making them a popular option for many patients.',
+  },
+  {
+    title: 'Fixed Bridge vs. Dental Implants',
+    description:
+      'While both options replace missing teeth, a fixed bridge is less invasive and more affordable than dental implants. However, implants provide longer-lasting results and help prevent bone loss in the jaw. Your dentist will help you determine which solution is best for your needs.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Cost and Alternatives to Fixed Bridges</h3>
+<p>
+While a fixed bridge is an excellent option for replacing missing teeth, it’s important to consider all your options, including dental implants and removable dentures, to make the best decision for your oral health and budget.
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+   <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
+    ]}
+  />
+  
+</Layout>

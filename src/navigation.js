@@ -49,16 +49,32 @@ export const headerData = {
           href: getPermalink('/crown'),
         },
         {
-          text: 'Contact',
-          href: getPermalink('/implant'),
-        },
-        {
-          text: 'Terms',
+          text: 'Allonx',
           href: getPermalink('/allonx'),
         },
         {
-          text: 'Privacy policy',
+          text: 'Bridge',
           href: getPermalink('/bridge'),
+        },
+        {
+          text: 'Implant',
+          href: getPermalink('/implant'),
+        },
+        {
+          text: 'Implant Crown and Bridge',
+          href: getPermalink('/implantcrown'),
+        },
+        {
+          text: 'Extraction',
+          href: getPermalink('/extraction'),
+        },
+        {
+          text: 'Dentures',
+          href: getPermalink('/denture'),
+        },
+        {
+          text: 'Invisalign',
+          href: getPermalink('/invisalign'),
         },
       ],
     },
@@ -67,11 +83,11 @@ export const headerData = {
       links: [
         {
           text: 'New Patient Forms',
-          href: getPermalink('/landing/lead-generation'),
+          href: getPermalink('/forms'),
         },
         {
           text: 'Payment Informations',
-          href: getPermalink('/landing/sales'),
+          href: getPermalink('/payment'),
         }
       ],
     },
