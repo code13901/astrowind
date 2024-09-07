@@ -3,9 +3,11 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content2.astro';
 import Hero from '~/components/widgets/Hero2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
-  title: 'Deep Dental Cleaning in [Location]',
+  title: 'Deep Dental Cleaning',
+  description: 'Deep Dental Cleaning in Dunwoody, Chamblee, Sandy Springs, Atlanta'
 };
 ---
 
@@ -17,7 +19,7 @@ const metadata = {
     title="Understanding Deep Dental Cleaning: What You Need to Know for Optimal Oral Health"
     subtitle="When it comes to maintaining good oral hygiene, regular brushing, flossing, and routine dental cleanings are often enough for most people. However, there are cases where a standard cleaning isn't sufficient to address more severe dental issues. This is where deep dental cleaning, also known as scaling and root planing, comes into play. Deep dental cleaning is a more intensive procedure designed to treat gum disease and restore your oral health. In this comprehensive guide, we’ll explore what deep dental cleaning involves, why it’s necessary, and what you can expect during and after the procedure."
 
-    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/' }]}
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1551446591-142875a901a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Deep Dental Cleaning Hero Image',
@@ -64,6 +66,9 @@ const metadata = {
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What is Deep Dental Cleaning and Why is It Necessary?</h3>
       <p>Deep dental cleaning is a more intensive procedure designed to treat gum disease and restore your oral health. Here’s why it’s necessary:</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -138,6 +143,9 @@ const metadata = {
         <strong>Follow-Up Visits</strong>: Your dentist will schedule follow-up visits to monitor your progress and assess the effectiveness of the deep cleaning. During these visits, they will measure the depth of your gum pockets and check for any signs of infection or ongoing gum disease. In some cases, additional treatments may be necessary to achieve optimal results.
       </div>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
@@ -200,6 +208,9 @@ const metadata = {
         <strong>Manage Stress</strong>: Stress can weaken your immune system and make it more difficult for your body to fight off infections, including gum disease. Practice stress management techniques, such as exercise, meditation, and deep breathing, to support your overall health and well-being.
       </div>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </Content>
 
   <!-- Call to Action **************** -->
@@ -208,8 +219,36 @@ const metadata = {
     title="Conclusion: Take Charge of Your Oral Health"
     subtitle="Deep dental cleaning is a powerful tool in the fight against gum disease, offering significant benefits for your oral and overall health. By understanding the importance of this procedure and taking steps to maintain good oral hygiene, you can protect your teeth and gums for a lifetime."
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Contact Us to Schedule a Consultation', href: '/' },
+      { variant: 'primary', target: '_blank', text: 'Contact Us to Schedule a Consultation', href: '/contact' },
     ]}
   />
-  
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone.`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: `Dr. Ketan and staff are very professional and competent! This is patient-centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+    ]}
+  />
 </Layout>
