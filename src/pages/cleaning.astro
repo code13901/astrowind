@@ -1,7 +1,5 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content2.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero2.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -21,8 +19,8 @@ const metadata = {
 
     actions={[{ variant: 'primary', target: '_blank', text: 'Make an Appointmet', href: '/' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/smilingaftercleaning.png',
+      alt: 'Smiling after Dental cleaning',
     }}
   />
 
@@ -30,7 +28,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
 <Content
-  isReversed={true}  // Explicitly passing true (optional)
+  isReversed={true}  
   items={[
     {
       title: 'Prevention of Gum Disease',
@@ -71,6 +69,9 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Dental Cleaning is Crucial for Your Oral Health</h3>
       <p>Dental cleaning, also known as prophylaxis, is a preventive measure that goes beyond what your regular oral hygiene routine can achieve. Here’s why it’s so important:</p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
@@ -110,8 +111,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      src: '~/assets/images/cleaning.png',
+      alt: 'Dental Cleaning',
     }}
   >
     <Fragment slot="content">
@@ -128,10 +129,13 @@ const metadata = {
   <div>
   The frequency of your dental cleanings depends on your individual oral health needs. The American Dental Association (ADA) recommends that most people have their teeth professionally cleaned at least twice a year. However, if you have a history of gum disease, are prone to cavities, or have other oral health concerns, your dentist may recommend more frequent cleanings.
   </div>
-  </br>
+  <br/>
   <div>
   Regular dental visits allow your dentist to monitor your oral health and catch any potential issues early, before they become more serious. By keeping up with your cleanings, you can enjoy a lifetime of healthy teeth and gums.
   </div>
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
   </Fragment>
   </Content>
 
@@ -143,7 +147,7 @@ const metadata = {
   <div>
   Preventive dentistry focuses on maintaining optimal oral health through regular dental care, including cleanings, exams, and patient education. Dental cleaning is a cornerstone of preventive dentistry, as it helps to prevent common dental issues such as cavities, gum disease, and enamel erosion.
   </div>
-  </br>
+  <br/>
   <div>
 In addition to regular cleanings, preventive dentistry involves educating patients on proper brushing and flossing techniques, dietary habits that promote oral health, and the use of preventive treatments such as fluoride and dental sealants. By taking a proactive approach to your oral health, you can prevent the need for more invasive and costly dental treatments in the future.  </div>
   </Fragment>
@@ -168,16 +172,19 @@ In addition to regular cleanings, preventive dentistry involves educating patien
         'Pregnant women with gum disease are at a higher risk of premature birth and low birth weight. Regular dental cleanings during pregnancy are essential for maintaining oral health and reducing the risk of complications.'
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
+  image={{
+    src: '~/assets/images/smilingaftercleaning2.png',
+    alt: 'Benefits Image',
+  }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Connection Between Oral Health and Overall Health
 </h3>
 <p>Your oral health is closely linked to your overall health. Research has shown that there is a strong connection between oral health and a variety of systemic conditions, including:
 </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -207,10 +214,7 @@ In addition to regular cleanings, preventive dentistry involves educating patien
   },
 ]}
 
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
+   
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Overcoming Dental Anxiety: Making Dental Cleanings Comfortable
@@ -220,60 +224,50 @@ It’s not uncommon for people to experience anxiety or fear when it comes to de
 </p>
     </Fragment>
   </Content>
-<div class="text-md tracking-tight dark:text-white sm:text-xl m-16 text-justify ">Remember, the benefits of regular dental cleanings far outweigh the temporary discomfort or anxiety you may feel. Your dentist and hygienist are there to support you and ensure you have a positive experience.
+
+ 
+<div class="text-md tracking-tight dark:text-white sm:text-xl m-16 text-justify  bg-blue-50 dark:bg-transparent ">Remember, the benefits of regular dental cleanings far outweigh the temporary discomfort or anxiety you may feel. Your dentist and hygienist are there to support you and ensure you have a positive experience.
 </div>
+
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
         image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
+          alt: 'Jim ',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
         image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
+          alt: 'Paul',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
         image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
+          alt: 'Patient testimonial',
         },
       },
+   
     ]}
-    callToAction={{
+  />
+    <!-- callToAction={{
       target: '_blank',
       text: 'More testimonials...',
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
-    }}
-  />
+    }} -->
+  
 
-  <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
-      },
-    ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+
+
 </Layout>

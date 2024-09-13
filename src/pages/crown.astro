@@ -1,0 +1,182 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Dental Crowns: Restoring Your Smile with Strength and Beauty',
+  description: 'Comprehensive guide on dental crowns, including types, procedures, benefits, and care.'
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Dental Crowns"
+    title="Everything You Need to Know About Dental Crowns: Restoring Your Smile with Strength and Beauty"
+    subtitle="Dental crowns are a common and highly effective solution for restoring damaged teeth and enhancing your smile's appearance. In this comprehensive guide, we'll explore what dental crowns are, the various types available, the procedure for placing a crown, and how they can benefit your oral health."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Dental Crown Hero Image',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: 'What is a Dental Crown?',
+        description: `A dental crown is a custom-made cap that covers the entire visible portion of a damaged or decayed tooth. Crowns are designed to restore the tooth's shape, size, strength, and appearance, effectively becoming the tooth's new outer surface. Crowns can be made from various materials, each offering distinct advantages in terms of durability, appearance, and cost.`,
+      },
+      {
+        title: 'Types of Dental Crowns',
+        description: `
+        Crowns can be made from various materials, including:
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+          <li><strong>Porcelain or Ceramic</strong>: These crowns closely resemble natural teeth and are biocompatible, making them ideal for front teeth.</li>
+          <li><strong>Porcelain-Fused-to-Metal (PFM)</strong>: These crowns offer a balance of durability and aesthetics, suitable for both front and back teeth.</li>
+          <li><strong>Metal (Gold, Silver, or Alloy)</strong>: Extremely durable, these crowns are excellent for molars but less aesthetic.</li>
+          <li><strong>Zirconia</strong>: Strong and durable, these crowns offer a good balance between appearance and strength.</li>
+          <li><strong>Resin</strong>: More affordable but less durable, typically used as a temporary solution.</li>
+        </ul>`,
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: 'When Are Dental Crowns Necessary?',
+      description: `Dental crowns are versatile and can be used to restore or enhance a tooth in various situations, such as:
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+          <li>Protecting a weak or damaged tooth.</li>
+          <li>Restoring a broken or severely worn tooth.</li>
+          <li>Supporting a tooth with a large filling.</li>
+          <li>Covering a tooth after a root canal.</li>
+          <li>Improving the appearance of a discolored or misshapen tooth.</li>
+          <li>Anchoring a dental bridge.</li>
+          <li>Covering a dental implant.</li>
+        </ul>`,
+    
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    alt: 'Dental Crown Procedure Image',
+    class: 'rounded-lg shadow-md mt-6',
+  }}
+/>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-4">Caring for Your Dental Crown</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">Dental crowns are designed to be durable and long-lasting, but they require proper care to maintain their appearance and function. Here are some tips:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+        <li>Maintain good oral hygiene by brushing and flossing daily.</li>
+        <li>Avoid hard or sticky foods that could damage the crown.</li>
+        <li>Visit your dentist regularly for checkups and maintenance.</li>
+        <li>If you grind your teeth, consider using a night guard to protect your crown.</li>
+        <li>Watch for signs of wear or damage and contact your dentist if you notice any issues.</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits of Dental Crowns</h3>
+      <div>
+        Dental crowns offer a wide range of benefits, including the restoration of function, aesthetic improvement, durability, protection of the underlying tooth, comfort and fit, and versatility in addressing both functional and cosmetic dental issues.
+      </div>
+      <br/>
+      <div>
+        While dental crowns are generally safe and effective, there are some potential risks and considerations to keep in mind:
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+          <li><strong>Tooth Sensitivity</strong>: You may experience sensitivity to hot and cold, especially if the tooth was extensively prepared.</li>
+          <li><strong>Allergic Reactions</strong>: Rarely, patients may be allergic to materials used in the crown.</li>
+          <li><strong>Chipping or Cracking</strong>: Although durable, crowns can still be damaged.</li>
+          <li><strong>Loose or Dislodged Crown</strong>: If the underlying tooth structure deteriorates, the crown may loosen or fall off.</li>
+          <li><strong>Cost</strong>: Crowns can be expensive, depending on the material used and the complexity of the procedure.</li>
+        </ul>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Conclusion: Invest in Your Smile with Dental Crowns</h3>
+      <div>
+        Dental crowns are a reliable and effective way to restore damaged teeth and improve the overall appearance of your smile. Whether you're dealing with a broken tooth, severe decay, or cosmetic concerns, a crown can provide the protection, function, and aesthetics you need to enjoy a healthy, confident smile.
+      </div>
+      <br/>
+      <div>
+        At Life.Dental, we are committed to helping you achieve the best possible results with our high-quality dental crowns. Our experienced team will work with you to determine the most suitable material and design for your crown, ensuring a comfortable fit and a beautiful outcome.
+      </div>
+      <br/>
+      <div>
+        Ready to restore your smile? Contact us today to schedule a consultation and learn more about how dental crowns can benefit your oral health. Let us help you achieve a lasting, strong, and radiant smile that you can be proud of.
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Call to Action **************** -->
+
+  <CallToAction
+    title="Invest in Your Smile with Dental Crowns"
+    subtitle="Ready to restore your smile? Contact us today to schedule a consultation and learn more about how dental crowns can benefit your oral health. Let us help you achieve a lasting, strong, and radiant smile that you can be proud of."
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Contact Us to Schedule a Consultation', href: '/contact' },
+    ]}
+  />
+  
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient Testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share. Dr. Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr. Ken. Highly recommend this dental practice to anyone.`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: `Dr. Ketan and staff are very professional and competent! This is patient-centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+    ]}
+  />
+</Layout>

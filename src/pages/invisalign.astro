@@ -1,0 +1,188 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Invisalign and Clear Aligners in Dunwoody, Chamblee, Atlanta, Sandy Springs',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Invisalign and Clear Aligners"
+    title="A Straight Smile Without the Metal—Invisalign & Clear Aligners"
+    subtitle="Gone are the days of traditional metal braces. With Invisalign and clear aligners, you can straighten your teeth discreetly and comfortably. At Life.Dental, we offer these cutting-edge solutions to help you achieve the smile of your dreams without the discomfort and visibility of traditional braces."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/invisalign-clear-aligners.png',
+      alt: 'Invisalign Clear Aligners',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'What is Invisalign?',
+      description:
+        'Invisalign is an innovative orthodontic treatment that uses clear, removable aligners to gradually straighten your teeth. Unlike traditional braces that use metal brackets and wires, Invisalign aligners are made from a smooth, clear plastic, making them virtually invisible and comfortable to wear.',
+    },
+    {
+      title: 'What are Clear Aligners?',
+      description:
+        'Clear aligners are custom-made trays that fit snugly over your teeth, gradually shifting them into the desired position. Invisalign is a popular brand of clear aligners, but there are other options available as well. The appeal of clear aligners is their nearly invisible appearance and the convenience of removing them when eating or brushing.',
+    },
+    {
+      title: 'How Does Invisalign Work?',
+      description:
+        'Invisalign treatment involves wearing a series of custom-made aligners that are changed every one to two weeks. Each set of aligners is designed to gradually move your teeth closer to their ideal position. You will visit your dentist or orthodontist regularly to monitor progress and receive your next set of aligners.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Discover the Benefits of Invisalign & Clear Aligners</h3>
+      <p>If you’re considering straightening your teeth, clear aligners like Invisalign offer a comfortable and discreet alternative to traditional braces. Here’s why they are so popular:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Discreet Appearance',
+        description:
+          'One of the biggest advantages of Invisalign and clear aligners is that they are virtually invisible. Whether you’re at work, school, or social events, you can smile with confidence knowing that your treatment is hardly noticeable to others.',
+      },
+      {
+        title: 'Comfort and Convenience',
+        description:
+          'Invisalign aligners are made from smooth plastic, eliminating the discomfort often associated with metal brackets and wires. Additionally, they are removable, which means you can enjoy your favorite foods without restrictions and maintain your regular oral hygiene routine.',
+      },
+      {
+        title: 'Customized for Your Smile',
+        description:
+          'Invisalign and other clear aligners are custom-made using advanced 3D imaging technology. This ensures that the aligners fit snugly and comfortably over your teeth while providing precise, controlled tooth movement.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/invisalign-benefits.png',
+      alt: 'Benefits of Invisalign',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose Invisalign?</h3>
+      <p>Invisalign offers a range of benefits that make it a preferred choice for patients looking to straighten their teeth discreetly. Here’s what makes it stand out:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Invisalign Treatment Process: What to Expect</h3>
+  <div>
+  Your journey to a straighter smile with Invisalign is a straightforward and personalized process. Here’s an overview of what you can expect during your treatment:
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Initial Consultation</strong>: Your dentist will evaluate your teeth and discuss your smile goals. If Invisalign is the right choice for you, digital impressions or scans of your teeth will be taken.</li>
+    <li><strong>Custom Treatment Plan</strong>: Using advanced 3D imaging, your dentist will create a customized treatment plan that shows the step-by-step movement of your teeth. You’ll even be able to see a preview of your new smile.</li>
+    <li><strong>Wearing the Aligners</strong>: Once your aligners are ready, you’ll wear each set for about 20-22 hours a day, changing to a new set every 1-2 weeks as your teeth gradually shift into place.</li>
+    <li><strong>Regular Checkups</strong>: Every 6-8 weeks, you’ll visit your dentist or orthodontist to monitor your progress and receive your next sets of aligners. The entire treatment usually lasts between 12-18 months, depending on the complexity of your case.</li>
+    <li><strong>Retainers</strong>: After completing the Invisalign treatment, you’ll need to wear a retainer to maintain your newly aligned smile and prevent your teeth from shifting back to their original position.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Who Is a Good Candidate for Invisalign?',
+        description:
+        'Invisalign is ideal for teens and adults with mild to moderate misalignment issues, including overcrowding, gaps, crossbites, underbites, and overbites. It may not be suitable for patients with severe misalignment or those who require significant jaw corrections, but it’s a great option for many common orthodontic issues.',
+      },
+      {
+        title: 'Invisalign for Teens',
+        description:
+        'Invisalign Teen is specifically designed for younger patients, offering the same benefits as traditional Invisalign but with added features like compliance indicators that show whether the aligners are being worn enough each day.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/invisalign-candidates.png',
+      alt: 'Invisalign Candidates',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Am I a Candidate for Invisalign?</h3>
+      <p>If you’re considering Invisalign, you may be wondering if it’s right for you. Find out whether Invisalign or another clear aligner treatment is the best solution for your smile correction needs.</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Clear Aligners vs. Traditional Braces',
+    description:
+      'While both clear aligners and traditional braces are effective at straightening teeth, they offer different advantages. Clear aligners are more discreet and comfortable, while braces may be more effective for complex cases. The best option for you will depend on your specific orthodontic needs.',
+  },
+  {
+    title: 'How Long Does Invisalign Take?',
+    description:
+      'Invisalign treatment typically takes 12-18 months, depending on the severity of your case. Some patients may see results in as little as 6 months, while others may require a longer treatment time.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Invisalign vs. Traditional Braces</h3>
+<p>
+Clear aligners and traditional braces both offer effective results, but each has its pros and cons. Learn more about how they compare in terms of appearance, comfort, and treatment time.
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient Testimonials"
+    subtitle="Hear from patients who have transformed their smiles with Invisalign."
+    testimonials={[
+      {
+        testimonial: `Invisalign has been a game-changer for me. I didn’t want the look of braces, and the clear aligners were so comfortable and discreet!`,
+        name: 'Ashley',
+        image: {
+          alt: 'Ashley',
+        },
+      },
+      {
+        testimonial: `I’m thrilled with the results of my Invisalign treatment. The process was easy, and I could see progress in just a few months.`,
+        name: 'Jason',
+        image: {
+          alt: 'Jason',
+        },
+      },
+      {
+        testimonial: `As a teenager, I loved that I could straighten my teeth without metal braces. Invisalign was so easy to use, and no one even noticed I was wearing them!`,
+        name: 'Emily',
+        image: {
+          alt: 'Emily',
+        },
+      },
+   
+    ]}
+  />
+  
+</Layout>
