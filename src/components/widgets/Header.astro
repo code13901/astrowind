@@ -81,15 +81,11 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       </div>
     </div>
     <nav
-      class:list={[
-        'items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto',
-        { 'md:col-start-2': position === 'center' },
-        'mobile-menu' // Add this class for targeting mobile styles
-      ]}
+      class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center"
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-base tracking-[0.01rem] font-medium bg-white dark:bg-gray-900 md:bg-transparent"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
       >
         {
           links.map(({ text, href, links }) => (
@@ -168,27 +164,3 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     </div>
   </div>
 </header>
-
-<style>
-  /* Mobile menu styles */
-  @media (max-width: 767px) {
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: white; /* or any other solid color */
-      z-index: 50;
-    }
-
-    .mobile-menu ul {
-      padding-top: 4rem; /* Adjust as needed to account for the header height */
-    }
-
-    /* Dark mode styles */
-    :global(.dark) .mobile-menu {
-      background-color: #1a202c; /* or any dark color of your choice */
-    }
-  }
-</style>
