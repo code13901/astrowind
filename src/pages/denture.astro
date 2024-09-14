@@ -1,0 +1,187 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dentures in [Location]',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Dentures"
+    title="Restore Your Smile and Confidence with Custom Dentures"
+    subtitle="Missing teeth can impact more than just your smile—they can affect your ability to eat, speak, and maintain proper oral health. At Life.Dental, we offer custom dentures that fit your lifestyle, whether you need partial dentures, complete dentures, or immediate dentures. Learn more about our denture options and discover which solution is best for you."
+
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/dentures.png',
+      alt: 'Dentures',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={true}  
+  items={[
+    {
+      title: 'Removable Resin Partial Denture',
+      description:
+        'A removable resin partial denture is an affordable and aesthetic option for patients missing one or more teeth. Made from an acrylic resin base that mimics natural gums, this denture replaces missing teeth while blending seamlessly with the rest of your smile. It is removable, which makes it easy to clean and maintain.',
+    },
+    {
+      title: 'Complete Denture',
+      description:
+        'Complete dentures, or full dentures, are used when all teeth in the upper or lower arch are missing. They restore both function and aesthetics, providing a natural-looking solution for patients who have lost all their teeth. Custom-made to fit snugly on your gums, these dentures help you smile, eat, and speak confidently.',
+    },
+    {
+      title: 'Cast Partial Denture',
+      description:
+        'A cast partial denture features a metal framework for added durability and stability. These dentures are ideal for patients who need to replace several missing teeth and want a longer-lasting, more stable solution compared to resin-based partials. The metal framework helps the denture fit more securely, making it a durable option.',
+    },
+  ]}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Explore Your Denture Options</h3>
+      <p>Whether you’re missing one tooth or several, dentures offer an effective solution to restore your smile and functionality. Here’s an overview of the most common types of dentures:</p>
+    </Fragment>
+</Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Immediate Denture',
+        description:
+          'Immediate dentures are placed immediately after teeth are extracted, allowing you to maintain your smile and function while your gums heal. This type of denture is a temporary solution, often replaced with a more permanent option once your gums have fully healed.',
+      },
+      {
+        title: 'Removable vs. Fixed Dentures',
+        description:
+          'While removable dentures offer convenience and ease of cleaning, some patients may prefer fixed solutions like dental implants. Removable dentures are cost-effective and non-invasive, but fixed options provide superior stability and function.',
+      },
+      {
+        title: 'Caring for Your Dentures',
+        description:
+          'Taking care of your dentures is essential for their longevity. Cleaning them daily, soaking them in water or a denture solution overnight, and visiting your dentist regularly for adjustments are all key to ensuring your dentures last.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/immediate_dentures.png',
+      alt: 'Immediate Dentures',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Immediate Dentures and Denture Care</h3>
+      <p>If you’ve had teeth extracted, immediate dentures can be a temporary solution while you heal. Learn more about how to care for your dentures and ensure they last for years to come.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Which Type of Denture Is Right for You?</h3>
+  <div>
+  Choosing the right denture depends on several factors, including the number of teeth missing, the condition of your remaining teeth, and your budget. Here’s a quick overview of the key benefits of each type:
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Removable Resin Partial Denture</strong>: A cost-effective solution for replacing a few teeth with a natural-looking appearance.</li>
+    <li><strong>Complete Denture</strong>: Ideal for those who are missing all teeth in one or both arches and want a full-arch solution.</li>
+    <li><strong>Cast Partial Denture</strong>: A more durable and stable option for patients who need a partial denture but want the added support of a metal framework.</li>
+    <li><strong>Immediate Denture</strong>: A great temporary solution while healing after extractions, with the option for a more permanent denture later.</li>
+  </ul>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Dental Implants vs. Dentures',
+        description:
+        'If you’re considering dentures but want to explore a more permanent solution, dental implants may be the answer. Implants provide superior stability and prevent bone loss, but they require surgery and are a larger investment.',
+      },
+      {
+        title: 'Fixed Dentures for Better Stability',
+        description:
+        'Fixed dentures, supported by implants, offer the most secure fit. They look and function like natural teeth but come at a higher cost. Fixed dentures can improve speech and chewing efficiency compared to removable options.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/dental_implants_vs_dentures.png',
+      alt: 'Dental Implants vs. Dentures',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Dentures vs. Dental Implants: Which is Best?</h3>
+      <p>While dentures offer an affordable solution for missing teeth, dental implants provide a more permanent option. Discover the key differences and which option may be best for your oral health needs.</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Cost of Dentures',
+    description:
+      'The cost of dentures varies depending on the type (resin, cast, complete, or immediate) and the materials used. Dentures are generally more affordable than implants but require periodic adjustments or replacements over time.',
+  },
+  {
+    title: 'Removable Dentures vs. Fixed Dentures',
+    description:
+      'Removable dentures are convenient and non-invasive, while fixed dentures offer greater stability. The best option depends on your budget, lifestyle, and oral health.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What You Need to Know About Denture Costs</h3>
+<p>
+Dentures are a cost-effective way to restore your smile, but it’s important to understand the different factors that impact the overall cost, including materials, type, and necessary adjustments over time.
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+    <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
+    ]}
+  />
+  
+</Layout>

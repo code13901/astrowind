@@ -21,7 +21,7 @@ const metadata = {
         variant: 'primary',
         text: 'Schedule a free consultation',
         href: '/contact',
-        icon: 'tabler:link',
+        icon: 'tabler:calendar',
       }
     ]}
     image={{ src: '~/assets/images/smilingwoman.png', alt: 'Hero Image' }}
@@ -31,7 +31,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="text-justify text-black">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
+      <span class="text-justify text-black dark:text-white">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
     </Fragment>
   </Hero>
 
@@ -229,4 +229,16 @@ const metadata = {
       },
     ]}
   />
+
+  <!-- Google tag (gtag.js) -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16697919472"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args) {
+      dataLayer.push(args);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-16697919472');
+  </script>
 </Layout>
