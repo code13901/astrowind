@@ -1,0 +1,108 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content2.astro';
+
+const metadata = {
+  title: 'Privacy Policy | Life.Dental',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Content isAfterContent={false}>
+    <Fragment slot="content">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
+        <p class="text-gray-600 mb-8"><strong>Last updated:</strong> September 17, 2024</p>
+        
+        <section class="mb-12">
+          <p class="mb-4">At Life.Dental, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your data when you use our services. By using our service, you agree to the terms described in this policy.</p>
+          <p class="mb-4">This Privacy Policy has been created with the assistance of the <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/" target="_blank" class="text-blue-600 hover:underline">Free Privacy Policy Generator</a>.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Interpretation and Definitions</h2>
+          <h3 class="text-2xl font-semibold mb-4">Interpretation</h3>
+          <p class="mb-4">Capitalized terms have specific meanings as defined below. These definitions apply in both singular and plural forms.</p>
+
+          <h3 class="text-2xl font-semibold mb-4">Definitions</h3>
+          <ul class="list-disc pl-6 mb-4 space-y-2">
+            <li><strong>Account:</strong> Your unique access point to our Service.</li>
+            <li><strong>Company:</strong> Life.Dental, located at 4511 Chamblee Dunwoody Road, a2, Atlanta, GA 30338.</li>
+            <li><strong>Cookies:</strong> Small files stored on your device to track, store, and collect data about your interactions with our Service.</li>
+            <li><strong>Country:</strong> Georgia, United States.</li>
+            <li><strong>Personal Data:</strong> Any information that relates to an identified or identifiable individual.</li>
+            <li><strong>Service:</strong> Refers to our Website.</li>
+            <li><strong>Website:</strong> Life.Dental, accessible at <a href="https://life.dental" rel="external nofollow noopener" target="_blank" class="text-blue-600 hover:underline">life.dental</a></li>
+            <li><strong>You:</strong> The individual or entity accessing or using the Service.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Collecting and Using Your Personal Data</h2>
+          <h3 class="text-2xl font-semibold mb-4">Types of Data Collected</h3>
+          
+          <h4 class="text-xl font-semibold mb-3">Personal Data</h4>
+          <p class="mb-4">We may collect the following personally identifiable information:</p>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li>Email address</li>
+            <li>First and last name</li>
+            <li>Phone number</li>
+            <li>Address details</li>
+            <li>Usage data</li>
+          </ul>
+
+          <h4 class="text-xl font-semibold mb-3">Usage Data</h4>
+          <p class="mb-6">We automatically collect usage data when you use our Service, including your IP address, browser type and version, visited pages, time and date of visits, time spent on pages, and other diagnostic data.</p>
+
+          <h4 class="text-xl font-semibold mb-3">Tracking Technologies and Cookies</h4>
+          <p class="mb-4">We use cookies and similar tracking technologies to monitor activity on our Service and store certain information. These may include:</p>
+          <ul class="list-disc pl-6 mb-4 space-y-2">
+            <li><strong>Cookies or Browser Cookies:</strong> Small files placed on your device.</li>
+            <li><strong>Web Beacons:</strong> Small electronic files in our emails for statistical analysis.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Use of Your Personal Data</h2>
+          <p class="mb-4">We may use your Personal Data for the following purposes:</p>
+          <ul class="list-disc pl-6 mb-4 space-y-2">
+            <li>To provide and maintain our Service</li>
+            <li>To manage your account</li>
+            <li>For contract fulfillment</li>
+            <li>To contact you</li>
+            <li>To manage your requests</li>
+            <li>For business transfers</li>
+            <li>For data analysis and service improvement</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Retention, Transfer, and Security of Your Personal Data</h2>
+          <p class="mb-4">We retain your Personal Data only for as long as necessary for the purposes outlined in this Privacy Policy. Your information may be transferred to and processed on computers located outside of your jurisdiction.</p>
+          <p class="mb-4">While we implement commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Children's Privacy</h2>
+          <p class="mb-4">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-semibold mb-6">Changes to this Privacy Policy</h2>
+          <p class="mb-4">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-semibold mb-6">Contact Us</h2>
+          <p class="mb-4">If you have any questions about this Privacy Policy, you can contact us:</p>
+          <ul class="list-disc pl-6 mb-4 space-y-2">
+            <li>By email: <a href="mailto:dr@life.dental" class="text-blue-600 hover:underline">dr@life.dental</a></li>
+            <li>By phone: <a href="tel:+14048069799" class="text-blue-600 hover:underline">404-806-9799</a></li>
+          </ul>
+        </section>
+      </div>
+    </Fragment>
+  </Content>
+</Layout>

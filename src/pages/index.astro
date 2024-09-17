@@ -52,7 +52,7 @@ const metadata = {
       {
         title: 'A Commitment to Innovation and Care',
         description:
-          'Our team stays at the forefront of dental innovation, continuously updating our skills and equipment to offer you the most advanced treatments available. From digital X-rays that reduce radiation exposure to state-of-the-art laser dentistry, we are equipped to handle all your dental needs with precision and care.',
+          "Our dedicated team is committed to staying ahead of the curve in dental advancements, regularly enhancing our skills and updating our technology to provide you with cutting-edge treatments. Whether it's utilizing low-radiation digital X-rays or employing the latest in laser dentistry, we are fully equipped to meet your dental needs with accuracy and exceptional care."
       },
       {
         title: 'Your Comfort is Our Priority',
@@ -144,48 +144,70 @@ const metadata = {
   
 
 
+
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our Services"
-    items={[
-      {
-        title: 'Implant',
-        description: 'Secure your smile with dental implants, the permanent solution for missing teeth that restores function and confidence.',
-        icon: 'healthicons:odontology-implant',
-      },
-      {
-        title: 'Cosmetic Dentistry',
-        description:
-          'Enhance your smile with cosmetic dentistry, designed to make a lasting first impression with every interaction.',
-          icon:'healthicons:dental-hygiene-outline',
-      },
-      {
-        title: 'Crown',
-        description:
-          'Restore strength and beauty to damaged teeth with custom dental crowns, offering protection and natural appearance.',
-          icon:'healthicons:heart-outline',
-      },
-      {
-        title: 'Invisalign',
-        description:
-          'Straighten your teeth discreetly with Invisalign—clear aligners that fit your lifestyle without the need for braces.',
-          icon:'healthicons:heartbeat-outline',
-      },
-      {
-        title: 'Emergency',
-        description:
-          'Get immediate care for unexpected dental issues with our prompt and reliable emergency services.',
-          icon:'healthicons:accident-and-emergency-outline',
-      },
-      {
-        title: 'More',
-        description: 'Discover our full range of dental services, from routine care to advanced treatments, tailored just for you.',
-        icon:'healthicons:tooth',
-      },
-     
-    ]}
-  >
+  title="Our Services"
+  items={[
+    {
+      title: 'Implant',
+      description: 'Secure your smile with dental implants, the permanent solution for missing teeth that restores function and confidence.',
+      icon: 'healthicons:odontology-implant',
+      callToAction: {
+        text: 'Learn More',
+        href: '/implant'
+      }
+    },
+    {
+      title: 'Cosmetic Dentistry',
+      description: 'Enhance your smile with cosmetic dentistry, designed to make a lasting first impression with every interaction.',
+      icon: 'healthicons:dental-hygiene-outline',
+      callToAction: {
+        text: 'Learn More',
+        href: '/cosmetic-dentistry'
+      }
+    },
+    {
+      title: 'Crown',
+      description: 'Restore strength and beauty to damaged teeth with custom dental crowns, offering protection and natural appearance.',
+      icon: 'healthicons:heart-outline',
+      callToAction: {
+        text: 'Learn More',
+        href: '/crown'
+      }
+    },
+    {
+      title: 'Invisalign',
+      description: 'Straighten your teeth discreetly with Invisalign—clear aligners that fit your lifestyle without the need for braces.',
+      icon: 'healthicons:heartbeat-outline',
+      callToAction: {
+        text: 'Learn More',
+        href: '/invisalign'
+      }
+    },
+    {
+      title: 'Emergency',
+      description: 'Get immediate care for unexpected dental issues with our prompt and reliable emergency services.',
+      icon: 'healthicons:accident-and-emergency-outline',
+      callToAction: {
+        text: 'Learn More',
+        href: '/emergency'
+      }
+    },
+    {
+      title: 'More',
+      description: 'Discover our full range of dental services, from routine care to advanced treatments, tailored just for you.',
+      icon: 'healthicons:tooth',
+      callToAction: {
+        text: 'View All Services',
+        href: '/services'
+      }
+    },
+  ]}
+/>
+
+  
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -230,7 +252,6 @@ const metadata = {
       },
     ]}
   />
-
   <!-- Google tag (gtag.js) -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16697919472"></script>
