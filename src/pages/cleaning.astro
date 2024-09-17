@@ -12,23 +12,23 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="Dental Cleaning"
-    title="Clean Teeth, Happy Heart—Let’s Give Your Smile a Fresh Start!"
-    subtitle="At our practice, we refer to dental cleanings and checkups as hygiene appointments or recall visits, and they involve much more than just a simple teeth cleaning. Whether you've had fillings, a smile makeover, implants, or are simply focused on maintaining a healthy mouth, our licensed dental hygienists in Georgia are here to ensure your smile stays vibrant for life. Located in the heart of Dunwoody, Atlanta, our state-of-the-art dental office provides top-tier teeth cleaning services. Our team is committed to ongoing education, with our hygienists and entire staff regularly attending advanced courses to ensure our patients receive the most current and effective care available. When it’s time for your regular dental checkups, you can trust our experienced Atlanta dentists to deliver exceptional care tailored to your needs."
-
-    actions={[{ variant: 'primary', target: '_blank', text: 'Make an Appointmet', href: '/' }]}
-    image={{
-      src: '~/assets/images/smilingaftercleaning.png',
-      alt: 'Smiling after Dental cleaning',
-    }}
-  />
+ 
+    <Hero
+      tagline="Dental Cleaning"
+      title="Clean Teeth, Happy Heart—Let us Give Your Smile a Fresh Start!"
+      subtitle="At our practice, we refer to dental cleanings and checkups as hygiene appointments or recall visits, and they involve much more than just a simple teeth cleaning. Whether you've had fillings, a smile makeover, implants, or are simply focused on maintaining a healthy mouth, our licensed dental hygienists in Georgia are here to ensure your smile stays vibrant for life."
+      actions={[{ variant: 'primary', target: '_blank', text: 'Make an Appointment', href: '/contact' }]}
+      image={{
+        src: '~/assets/images/smilingaftercleaning.png',
+        alt: 'Smiling after Dental cleaning',
+      }}
+    />
 
   
   <!-- Content Widget **************** -->
 
 <Content
-  isReversed={true}  
+  isReversed={false}  
   items={[
     {
       title: 'Prevention of Gum Disease',
@@ -66,7 +66,7 @@ const metadata = {
 
 
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Dental Cleaning is Crucial for Your Oral Health</h3>
+      <h3 class="text-3xl font-semibold mb-4">Why Dental Cleaning is Crucial for Your Oral Health</h3>
       <p>Dental cleaning, also known as prophylaxis, is a preventive measure that goes beyond what your regular oral hygiene routine can achieve. Here’s why it’s so important:</p>
     </Fragment>
     <Fragment slot="bg">

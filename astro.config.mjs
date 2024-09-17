@@ -26,7 +26,7 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   output: 'static',
-
+  site: 'https://life.dental',
   integrations: [
     tailwind({
       applyBaseStyles: false,
