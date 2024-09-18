@@ -1,0 +1,156 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Cosmetic Dentistry | Life.Dental - Enhance Your Smile',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Cosmetic Dentistry"
+    title="Enhance Your Smile with Cosmetic Dentistry"
+    subtitle="At Life.Dental, our cosmetic dentistry services are designed to give you the radiant smile you've always desired. From dental bonding to porcelain veneers and teeth whitening, we use the latest techniques to transform your smile."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Book an Appointment', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/cosmetic-dentistry.jpg',
+      alt: 'Cosmetic Dentistry',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed={false}  
+  items={[
+    {
+      title: 'Dental Bonding',
+      description:
+        'Dental bonding is a quick, cost-effective way to repair minor imperfections such as chips, gaps, or discoloration. Using a tooth-colored resin, we can reshape and improve the appearance of your teeth in just one visit. Dental bonding is ideal for those looking for a simple solution to enhance their smile.',
+    },
+    {
+      title: 'Composite Veneers',
+      description:
+        'Composite veneers are an affordable alternative to porcelain veneers, providing a natural look by sculpting resin directly onto your teeth. These veneers can address issues like discoloration, cracks, and uneven teeth, offering immediate results in a single appointment.',
+    },
+    {
+      title: 'Porcelain Veneers',
+      description:
+        'Porcelain veneers are thin, custom-made shells that cover the front of your teeth to improve their appearance. They are a more durable and long-lasting option compared to composite veneers. Porcelain veneers can correct gaps, discoloration, and misaligned teeth, providing a natural and beautiful smile.',
+    },
+    {
+      title: 'Teeth Whitening',
+      description:
+        'At Life.Dental, we offer professional teeth whitening services that can remove years of stains and discoloration, leaving you with a brighter, whiter smile. Our in-office and at-home whitening options are safe, effective, and customized to your desired level of whitening.',
+    },
+  ]}
+
+>
+
+    <Fragment slot="content">
+      <h3 class="text-3xl font-semibold mb-4">Why Choose Cosmetic Dentistry?</h3>
+      <p>Cosmetic dentistry goes beyond enhancing your smile—it boosts your confidence and improves your overall dental health. Whether you're interested in <a href="/veneers">veneers</a> for long-term beauty or quick fixes like <a href="/bonding">dental bonding</a>, cosmetic dentistry at Life.Dental has a solution tailored for you.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Benefits of Dental Bonding',
+        description:
+          'Dental bonding is an ideal solution for small cosmetic issues. It helps restore cracked or chipped teeth, close small gaps, and improve the appearance of discolored teeth. With minimal invasiveness, this procedure is completed in just one visit, giving you a refreshed look quickly.',
+      },
+      {
+        title: 'Why Choose Composite Veneers?',
+        description:
+          'Composite veneers offer a cost-effective and minimally invasive way to correct tooth imperfections. They are easily applied and sculpted directly onto your teeth to fix cracks, chips, and discoloration. The composite material provides a natural appearance and can be completed in one visit.',
+      },
+      {
+        title: 'Porcelain Veneers for a Lasting Solution',
+        description:
+          'Porcelain veneers are a durable, stain-resistant solution to transform your smile. These thin shells cover the front of your teeth, correcting gaps, chips, and discoloration. With proper care, porcelain veneers can last up to 15 years, providing you with a stunning, natural-looking smile.',
+      },
+      {
+        title: 'Teeth Whitening: A Brighter Smile',
+        description:
+          'Our professional teeth whitening treatments at Life.Dental are customized to suit your whitening goals. Whether you prefer in-office treatments for immediate results or a take-home kit, we offer solutions that are safe and effective. Whitening is the perfect complement to other cosmetic treatments, like veneers or bonding.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/cosmetic-procedure.png',
+      alt: 'Cosmetic Dental Procedure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Understanding Cosmetic Dental Procedures</h3>
+      <p>Cosmetic dental procedures are designed to enhance the aesthetic appearance of your teeth. Whether you're dealing with stains, chips, or gaps, cosmetic dentistry can provide a solution to create the smile you've always wanted. Each treatment option is tailored to meet your specific goals.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Next Section -->
+
+  <Content >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Long-Term Results with Porcelain Veneers</h3>
+      <p>
+        Porcelain veneers offer the best long-term solution for transforming your smile. These custom-made shells are designed to last, and with proper care, they can provide up to 15 years of service. Unlike composite veneers, porcelain is more durable and resistant to stains, making it ideal for those looking for lasting beauty. Explore more about <a href="/veneers">veneers</a> today.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Final Section -->
+
+  <Content >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Teeth Whitening for a Brighter Smile</h3>
+      <p>
+        If you're looking for an easy, non-invasive way to enhance your smile, teeth whitening is an excellent option. Our whitening treatments at Life.Dental remove stubborn stains and brighten your teeth significantly. Professional teeth whitening is safer and more effective than over-the-counter products, giving you faster results. Learn more about our <a href="/teeth-whitening">teeth whitening</a> services today.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
+    ]}
+  />
+</Layout>

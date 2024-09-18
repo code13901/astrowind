@@ -7,7 +7,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Dental Services - Life.Dental',
 };
 ---
 
@@ -15,210 +15,151 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    tagline="Dental Services"
+    title="Comprehensive Dental Care at Life.Dental"
+    subtitle="We offer a wide range of dental services tailored to meet all your oral health needs. From preventive care to advanced restorative treatments, our experienced team is here to help you achieve a healthy, confident smile."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Book an Appointment', href: '/contact' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Dental Services Hero Image',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Explore Our Dental Services"
+    subtitle="At Life.Dental, we provide comprehensive dental services to ensure your smile remains healthy and beautiful. Browse through our list of services and see how we can help you achieve your oral health goals."
     columns={3}
     items={[
       {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+        title: 'Dental Cleaning',
+        description: "Our routine dental cleanings help remove plaque, tartar, and stains, ensuring a healthier smile. Regular cleanings prevent gum disease and cavities, keeping your teeth in optimal condition.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/cleaning'
+        }
       },
       {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+        title: 'Deep Cleaning',
+        description: "If you suffer from gum disease, deep cleaning (scaling and root planing) helps remove bacteria beneath the gumline to restore gum health and prevent further damage.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/deepcleaning'
+        }
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
+        title: 'Root Canal Treatment',
+        description: "When a tooth's pulp becomes infected or inflamed, a root canal can save the tooth by removing the damaged tissue and sealing it to prevent further issues.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/rct'
+        }
       },
       {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+        title: 'Dental Crowns',
+        description: "Restore the strength, shape, and appearance of damaged teeth with custom-made crowns. Our crowns are designed to blend seamlessly with your natural teeth.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/crown'
+        }
       },
       {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+        title: 'All-on-X Implants',
+        description: "All-on-X dental implants offer a permanent, secure solution for replacing missing teeth. With just four to six implants, you can restore a full arch of teeth with a hybrid denture.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/allonx'
+        }
       },
       {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
+        title: 'Dental Bridge',
+        description: "A dental bridge helps close gaps caused by missing teeth. It restores both function and appearance, ensuring you can eat and speak comfortably.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/bridge'
+        }
       },
       {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
+        title: 'Dental Implants',
+        description: "Dental implants are the gold standard for tooth replacement. These titanium posts fuse with the jawbone, providing a secure foundation for crowns or bridges.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/implant'
+        }
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
+        title: 'Implant Crown & Bridge',
+        description: "Implant-supported crowns and bridges provide a long-lasting solution for missing teeth, offering both stability and a natural look.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/implantcrown'
+        }
       },
       {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+        title: 'Tooth Extraction',
+        description: "When a tooth is severely damaged or decayed, an extraction may be necessary. We ensure a painless experience and provide post-care to aid in recovery.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/extraction'
+        }
+      },
+      {
+        title: 'Dentures',
+        description: "We offer both partial and full dentures to replace missing teeth, restoring your ability to chew and speak while enhancing the appearance of your smile.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/denture'
+        }
+      },
+      {
+        title: 'Invisalign',
+        description: "Invisalign offers a nearly invisible way to straighten teeth without the need for traditional braces. It's a comfortable, effective solution for aligning your smile.",
+        callToAction: {
+          text: 'Learn More',
+          href: '/invisalign'
+        }
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Call to Action *************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content>
+  <CallToAction
+    title="Ready to Improve Your Smile?"
+    subtitle="Whether you need a routine cleaning or advanced restorative care, Life.Dental is here to provide exceptional dental services. Schedule your appointment today and let us help you achieve a healthy, confident smile."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Book an Appointment', href: '/contact' }]}
+  />
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
+  title="Patient testimonials"
+  subtitle="Discover what patients have to say about their experiences working with us."
+  testimonials={[
+    {
+      testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+      name: 'Jim',
+      image: {
+        alt: 'Jim ',
       },
-      {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
+    },
+    {
+      testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+      name: 'Paul',
+      image: {
+        alt: 'Paul',
       },
-      {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
+    },
+    {
+      testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+      name: 'Diane',
+      image: {
+        alt: 'Patient testimonial',
       },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
-      },
-    ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+    },
+ 
+  ]}
+/>
+  
 </Layout>
