@@ -18,6 +18,7 @@
     "postinstall": "npm rebuild lightningcss"
   },
   "dependencies": {
+    "18": "^0.0.0",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrolib/analytics": "^0.5.0",
