@@ -19,7 +19,7 @@ export const headerData = {
         },
         {
           text: 'Tour our office',
-          href: getPermalink('/office'),
+          href: getPermalink('/touroffice'),
         },
         {
           text: 'Our technologies',

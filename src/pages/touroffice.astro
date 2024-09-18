@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+
+// Import your images
+import waitingArea from '~/assets/images/waiting-area.jpg';
+import treatmentRoom from '~/assets/images/treatment-room1.jpg';
+import treatmentRoom2 from '~/assets/images/treatment-room2.jpg';
+import treatmentRoom3 from '~/assets/images/treatment-room3.jpg';
+import cbct from '~/assets/images/cbct.jpg';
+import officeExterior from '~/assets/images/office-exterior.jpg';
+
+const metadata = {
+  title: 'Tour Our Office',
+  description: 'Take a virtual tour of Life.Dental\'s state-of-the-art dental office in Atlanta',
+};
+
+const officeImages = [
+  { src: waitingArea, alt: 'Waiting Area' },
+  { src: treatmentRoom, alt: 'Treatment Room' },
+  { src: treatmentRoom2, alt: 'Treatment Room 2' },
+  { src: treatmentRoom3, alt: 'Treatment Room 3' },
+  { src: cbct, alt: 'CBCT' },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    tagline="Virtual Office Tour"
+    title="Experience Our State-of-the-Art Dental Facility"
+    subtitle="Welcome to Life.Dental! Take a virtual tour of our modern, comfortable office designed to provide you with the best dental care experience possible."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Schedule Your Visit', href: '/contact' }]}
+    image={{
+      src: officeExterior,
+      alt: 'Life.Dental Office Exterior',
+    }}
+  />
+
+  <!-- Office Tour Image Grid -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Office Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {officeImages.map((image) => (
+          <div class="aspect-w-16 aspect-h-9">
+            <Image src={image.src} alt={image.alt} class="object-cover w-full h-full rounded-lg shadow-md" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-blue-50 dark:bg-slate-800 py-16 px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+      Ready to Experience Our Office in Person?
+    </h2>
+    <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+      Schedule your visit today and see why our patients love coming to Life.Dental.
+    </p>
+    <div class="mt-8">
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+      >
+        Book Your Appointment
+      </a>
+    </div>
+  </section>
+</Layout>
