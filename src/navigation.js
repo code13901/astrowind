@@ -92,8 +92,8 @@ export const headerData = {
       ],
     },
     {
-      text: 'Before/After',
-          href: './before-after',
+      text: 'Smile Gallery',
+          href: './smilegallery',
       
     },
   ],

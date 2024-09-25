@@ -89,9 +89,10 @@ export interface MetaDataTwitter {
 }
 
 export interface Image {
-  src: string;
+  src: string | ImageMetadata; // Allow both strings and image metadata objects
   alt?: string;
 }
+
 
 export interface Video {
   src: string;
@@ -285,6 +286,7 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
   isAfterContent?: boolean;
   callToAction?: CallToAction;
+  src?: string;
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}

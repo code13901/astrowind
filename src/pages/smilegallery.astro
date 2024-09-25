@@ -1,0 +1,84 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getImage } from 'astro:assets';
+
+// Import images
+import BeforeAllonX from '~/assets/images/BeforeAllonX.jpg';
+import AfterAllonX from '~/assets/images/AfterAllonX.jpg';
+import BeforeDenture from '~/assets/images/BeforeDenture.png';
+import AfterDenture from '~/assets/images/AfterDenture.png';
+import BeforeVeneers from '~/assets/images/BeforeCrown.jpg';
+import AfterVeneers from '~/assets/images/AfterCrown.jpg';
+import BeforeCrowns from '~/assets/images/BeforeCrowns.jpg';
+import AfterCrowns from '~/assets/images/AfterCrowns.jpg';
+
+// Generate optimized image URLs
+const beforeAllonXImage = await getImage({ src: BeforeAllonX });
+const afterAllonXImage = await getImage({ src: AfterAllonX });
+const beforeDentureImage = await getImage({ src: BeforeDenture });
+const afterDentureImage = await getImage({ src: AfterDenture });
+const beforeVeneersImage = await getImage({ src: BeforeVeneers });
+const afterVeneersImage = await getImage({ src: AfterVeneers });
+const beforeCrownsImage = await getImage({ src: BeforeCrowns });
+const afterCrownsImage = await getImage({ src: AfterCrowns });
+
+const metadata = {
+  title: 'Before and After Treatment Gallery',
+  description: 'See the transformation in our patients with these before and after treatment photos.',
+};
+
+const galleryItems = [
+  {
+    before: beforeAllonXImage.src,
+    beforeAlt: 'Before All-on-4 Implant-Supported Dentures',
+    after: afterAllonXImage.src,
+    afterAlt: 'After All-on-4 Implant-Supported Dentures',
+  },
+  {
+    before: beforeDentureImage.src,
+    beforeAlt: 'Before Dentures',
+    after: afterDentureImage.src,
+    afterAlt: 'After Dentures',
+  },
+  {
+    before: beforeVeneersImage.src,
+    beforeAlt: 'Before Veneers',
+    after: afterVeneersImage.src,
+    afterAlt: 'After Veneers',
+  },
+  {
+    before: beforeCrownsImage.src,
+    beforeAlt: 'Before Crowns',
+    after: afterCrownsImage.src,
+    afterAlt: 'After Crowns',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <section class="hero text-center py-8 bg-gray-100">
+    <h1 class="text-4xl font-bold mb-4">Before and After Treatment Gallery</h1>
+    <p>Witness the incredible transformations our patients have experienced.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-12 px-4 md:px-8 max-w-7xl mx-auto">
+    {galleryItems.map((item, index) => (
+      <div class="image-pair flex flex-col items-center gap-4" >
+        <div class="flex flex-col md:flex-row justify-between gap-4 w-full max-w-md mx-auto">
+          <!-- Before Image -->
+          <figure class="before flex-1">
+            <img src={item.before} alt={item.beforeAlt} class="w-full h-auto object-cover rounded-lg shadow-md max-w-xs mx-auto" />
+            <figcaption class="text-center mt-2 text-gray-700 font-medium">{item.beforeAlt}</figcaption>
+          </figure>
+          <!-- After Image -->
+          <figure class="after flex-1">
+            <img src={item.after} alt={item.afterAlt} class="w-full h-auto object-cover rounded-lg shadow-md max-w-xs mx-auto" />
+            <figcaption class="text-center mt-2 text-gray-700 font-medium">{item.afterAlt}</figcaption>
+          </figure>
+        </div>
+      </div>
+    ))}
+  </section>
+</Layout>
