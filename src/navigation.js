@@ -93,7 +93,7 @@ export const headerData = {
     },
     {
       text: 'Smile Gallery',
-          href: '/smilegallery',
+          href: getPermalink('/smilegallery'),
       
     },
   ],
