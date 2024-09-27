@@ -37,45 +37,6 @@ const metadata = {
   </Hero>
 
  
-
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Our Mission',
-        description:
-          'We understand that visiting the dentist can be daunting for many, which is why our approach is centered on creating a stress-free, personalized experience.',
-      },
-      {
-        title: 'A Commitment to Innovation and Care',
-        description:
-          "Our dedicated team is committed to staying ahead of the curve in dental advancements, regularly enhancing our skills and updating our technology to provide you with cutting-edge treatments. Whether it's utilizing low-radiation digital X-rays or employing the latest in laser dentistry, we are fully equipped to meet your dental needs with accuracy and exceptional care."
-      },
-      {
-        title: 'Your Comfort is Our Priority',
-        description:
-          'At Life.Dental, your comfort and satisfaction are our top priorities.Our goal is not just to care for your teeth but to make every visit a positive experience that leaves you smiling.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/womanlaughing.jpg',
-      alt: 'beautiful smile in Atlanta',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Welcome to Dr.Ketan Ginoya's Dental Practice: Where Your Smile is Our Priority</h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
   <Content
   id="about"
   
@@ -111,7 +72,46 @@ const metadata = {
 </Content>
 
 
-<Testimonials
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Our Mission',
+        description:
+          'We understand that visiting the dentist can be daunting for many, which is why our approach is centered on creating a stress-free, personalized experience.',
+      },
+      {
+        title: 'A Commitment to Innovation and Care',
+        description:
+          "Our dedicated team is committed to staying ahead of the curve in dental advancements, regularly enhancing our skills and updating our technology to provide you with cutting-edge treatments. Whether it's utilizing low-radiation digital X-rays or employing the latest in laser dentistry, we are fully equipped to meet your dental needs with accuracy and exceptional care."
+      },
+      {
+        title: 'Your Comfort is Our Priority',
+        description:
+          'At Life.Dental, your comfort and satisfaction are our top priorities.Our goal is not just to care for your teeth but to make every visit a positive experience that leaves you smiling.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/womanlaughing.jpg',
+      alt: 'beautiful smile in Atlanta',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Welcome to Dr.Ketan Ginoya's Dental Practice: Where Your Smile is Our Priority</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+ 
+<Testimonials 
     title="Patient testimonials"
     subtitle="Discover what patients have to say about their experiences working with us."
     testimonials={[
@@ -139,13 +139,6 @@ const metadata = {
    
     ]}
   />
-  <!-- Content Widget **************** -->
-
-  
-
-
-
-  <!-- Features2 Widget ************** -->
 
   <Features2
   title="Our Services"
