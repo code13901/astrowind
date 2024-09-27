@@ -65,8 +65,8 @@ apps:
 
 analytics:
   vendors:
-    googleAnalytics:
-      id: "G-J4S48RGBW6"
+    googleTagManager:
+      id: "GTM-53NNHCNG"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
