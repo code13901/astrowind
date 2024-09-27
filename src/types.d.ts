@@ -290,3 +290,13 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+interface HTMLScriptElement {
+  async: boolean;
+  src: string;
+}
+
+interface Window {
+  dataLayer: unknown[];
+  gtag: (command: string, ...args: unknown[]) => void;
+}

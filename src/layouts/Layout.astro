@@ -34,6 +34,22 @@ const { language, textDirection } = I18N;
     <ApplyColorMode />
     <Metadata {...metadata} />
     <SiteVerification />
+    <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i) {
+    w[l] = w[l] || [];
+    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    const f = d.getElementsByTagName(s)[0];
+    const j = document.createElement('script') as HTMLScriptElement;
+    const dl = l !== 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    if (f && f.parentNode) {
+      f.parentNode.insertBefore(j, f);
+    }
+  })(window, document, 'script', 'dataLayer', 'GTM-53NNHCNG');
+</script>
+  <!-- End Google Tag Manager -->
     <Analytics />
     <ViewTransitions fallback="swap" />
   </head>
@@ -49,7 +65,10 @@ const { language, textDirection } = I18N;
     <footer>
       <slot name="footer" />
     </footer>
-
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NNHCNG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
     <BasicScripts />
 
   </body>
