@@ -14,17 +14,32 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero
-    tagline="Emergency Dentist near me"
-    title="Same-Day Emergency Dentistry"
-    subtitle="Dental emergencies can strike at any moment, causing pain, stress, and disruption to your life. Whether you're dealing with a severe toothache, a broken tooth, or a sudden loss of a filling, our team is here to provide the immediate care you need. Located in the heart of Dunwoody, our practice offers same-day emergency dentistry to ensure you get relief fast. Our experienced and compassionate team is equipped to handle a wide range of dental emergencies, restoring your comfort and protecting your oral health. When every moment counts, trust us to be there for you."
+  tagline="Emergency Dentist near me"
+  title="Same-Day Emergency Dentistry in Atlanta"
+  actions={[{ variant: 'primary', target: '_blank', text: 'Call for Immediate Assistance', href: 'tel:+14048069799' }]}>
+  
+  <!-- Subtitle Slot -->
+  <Fragment slot="subtitle">
+    <p>We give prompt attention to all dental emergencies including:</p>
+    <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
+      <li>Severe Toothache</li>
+      <li>Knocked-Out Tooth</li>
+      <li>Chipped or Broken Tooth</li>
+      <li>Lost Filling or Crown</li>
+      <li>Abscess or Infection</li>
+      <li>Soft Tissue Injuries</li>
+    </ul>
+  </Fragment>
+  <Fragment slot="testimonial">
+    "Excellent coordination from staff and removal of wisdom tooth from Dr.Ketan. Highly recommend this dental practice to anyone"
+  </Fragment>
 
-    actions={[{ variant: 'primary', target: '_blank', text: 'Call for Immediate Assistance', href: '/contact' }]}
-    image={{
-      src: '~/assets/images/toothache.jpg',
-      alt: 'Emergency Dentist near me in Atlanta',
-    }}
-  />
-    
+  <!-- Author Slot -->
+  <Fragment slot="author">
+      Paul
+  </Fragment>
+</Hero>
+
   <!-- Content Widget **************** -->
 
 <Content
@@ -61,10 +76,17 @@ const metadata = {
         'Injuries to the gums, lips, or tongue can occur from accidents or trauma. These injuries may bleed heavily and cause pain, requiring immediate attention to manage the damage and promote healing. We provide expert care to address soft tissue injuries and ensure your recovery is smooth and complication-free.',
     },
   ]}
+      image={{
+        src: '~/assets/images/toothache.jpg',
+        alt: 'Emergency Dentist near me in Atlanta',
+      }}
 >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Common Dental Emergencies We Treat</h3>
       <p>Dental emergencies come in many forms, each requiring a specific approach to care. Here are some of the most common emergencies we handle and the immediate steps you should take:</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -130,6 +152,9 @@ const metadata = {
         <strong>Maintain Regular Dental Checkups</strong>: Many dental emergencies can be prevented with regular checkups and cleanings. Staying on top of your dental care allows potential problems to be caught early, before they escalate into emergencies.
       </div>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
@@ -158,7 +183,7 @@ const metadata = {
       </div>
       <br />
       <div>
-        <strong>Comprehensive Dental Services</strong>: In addition to emergency care, we offer a full range of dental services to meet all your oral health needs. Whether you need a follow-up visit, preventive care, or a cosmetic treatment, we're here to support your long-term dental health.
+        <strong>Comprehensive Dental Services</strong>: In addition to emergency care, we offer a full range of dental services to meet all your oral health needs. Whether you need a follow-up visit, <a href="/cleaning" class="text-blue-500 hover:text-blue-600">preventive care</a>, or a cosmetic treatment, we're here to support your long-term dental health.We also offer <a href="/dental-implants" class="text-blue-500 hover:text-blue-600">dental implants</a>, <a href="/dental-crowns" class="text-blue-500 hover:text-blue-600">dental crowns</a>, and <a href="/dental-bridges" class="text-blue-500 hover:text-blue-600">dental bridges</a>.
       </div>
     </Fragment>
   </Content>

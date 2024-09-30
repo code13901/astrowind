@@ -21,39 +21,58 @@ import '@fontsource-variable/inter';
 
 <style is:inline>
  
-.form-container{
+ .form-container {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #afbdea73;
+  background: #f3f7fc; /* Softer, more pleasant background color */
+  padding: 2rem; /* Ensures some padding on smaller devices */
 }
 
-form{
-  background: #fff;
+form {
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  padding:1rem ;
-  width:100% ;
+  padding: 2rem;
+  width: 100%;
   max-width: 600px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Enhanced shadow for floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
-form h3{
-  color: #555;
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Hover effect to draw attention */
+}
+
+form h3 {
+  color: #333; /* Darker color for better readability */
   font-weight: 800;
   margin-bottom: 20px;
+  font-size: 1.5rem; /* Slightly larger for readability */
+  text-align: center;
 }
-form input,form textarea{
-  border: 0;
-  margin: 10px 0;
+
+form input, form textarea {
+  border: 1px solid #e2e8f0; /* Soft border for clarity */
+  margin: 15px 0; /* Increased spacing */
   padding: 15px;
   outline: none;
   background: #f5f5f5;
   font-size: 16px;
+  border-radius: 10px; /* Softer corners */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
-form button{
+
+form input:focus, form textarea:focus {
+  border-color: #7b80e4; /* Accent color for focus state */
+  box-shadow: 0 0 10px rgba(123, 128, 228, 0.2); /* Soft focus glow */
+  background-color: #fff; /* Clearer background when focused */
+}
+
+form button {
   padding: 15px;
   background: #7b80e4;
   color: #fff;
@@ -61,48 +80,31 @@ form button{
   border: 0;
   outline: none;
   cursor: pointer;
-  width: 200px;
-  margin: 20px auto 0;
-  border-radius: 20px;
-}
-
-
-form{
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  padding:1rem ;
-  width:100% ;
-  max-width: 600px;
+  width: 100%; /* Full width button */
+  margin: 20px 0 0;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
 
+form button:hover {
+  background: #6f74dc; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly larger button on hover */
 }
-form h3{
-  color: #555;
-  font-weight: 800;
-  margin-bottom: 20px;
+
+form button:active {
+  background: #5e63c9; /* Even darker shade on click */
+  transform: scale(0.98); /* Button shrink on click */
 }
-form input,form textarea{
-  border: 0;
-  margin: 10px 0;
-  padding: 15px;
-  outline: none;
-  background: #f5f5f5;
-  font-size: 16px;
+
+@media (max-width: 768px) {
+  form {
+    padding: 1.5rem; /* Reduce padding on smaller devices */
+  }
+  form button {
+    width: 100%; /* Ensure button takes full width on mobile */
+  }
 }
-form button{
-  padding: 15px;
-  background: #7b80e4;
-  color: #fff;
-  font-size: 18px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  width: 200px;
-  margin: 20px auto 0;
-  border-radius: 20px;
-}
+
 
   :root {
     --aw-font-sans: 'InterVariable';
