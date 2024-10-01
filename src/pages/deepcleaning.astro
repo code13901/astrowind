@@ -6,25 +6,20 @@ import Layout from '~/layouts/PageLayout.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
-  title: 'Deep Dental Cleaning',
+  title: 'Deep Dental Cleaning near me',
   description: 'Deep Dental Cleaning in Dunwoody, Chamblee, Sandy Springs, Atlanta'
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <div class="pt-[72px] md:pt-[88px]">
     <Hero
-      tagline="Deep Dental Cleaning"
-      title="Understanding Deep Dental Cleaning: What You Need to Know for Optimal Oral Health"
-      subtitle="When it comes to maintaining good oral hygiene, regular brushing, flossing, and routine dental cleanings are often enough for most people. However, there are cases where a standard cleaning isn't sufficient to address more severe dental issues. This is where deep dental cleaning, also known as scaling and root planing, comes into play. Deep dental cleaning is a more intensive procedure designed to treat gum disease and restore your oral health. In this comprehensive guide, we'll explore what deep dental cleaning involves, why it's necessary, and what you can expect during and after the procedure."
+      tagline="Deep Dental Cleaning in Atlanta"
+      title="Deep Dental Cleaning to prevent gum disease, bleeding gums, tooth loss"
+      subtitle="When it comes to maintaining good oral hygiene, regular brushing, flossing, and routine dental cleanings are often enough for most people. However, there are cases where a standard cleaning isn't sufficient to address more severe dental issues. This is where deep dental cleaning, also known as scaling and root planing, comes into play. Deep dental cleaning is a more intensive procedure designed to treat gum disease and restore your oral health."
       actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
-      image={{
-        src: 'https://images.unsplash.com/photo-1551446591-142875a901a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        alt: 'Deep Dental Cleaning Hero Image',
-      }}
+
     />
-  </div>
 
   <!-- Content Widget **************** -->
   <Content
@@ -61,6 +56,10 @@ const metadata = {
           "Research has shown a strong connection between oral health and overall health. Gum disease has been linked to a variety of systemic conditions, including cardiovascular disease, diabetes, respiratory infections, and adverse pregnancy outcomes. By treating gum disease with deep dental cleaning, you can reduce your risk of these health issues and improve your overall well-being.",
       },
     ]}
+          image={{
+            src: 'https://images.unsplash.com/photo-1551446591-142875a901a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+            alt: 'Deep Dental Cleaning Hero Image',
+          }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What is Deep Dental Cleaning and Why is It Necessary?</h3>
@@ -102,10 +101,7 @@ const metadata = {
         "After the deep cleaning is complete, your dentist will provide you with specific instructions on how to care for your gums and teeth as they heal. This may include recommendations for oral hygiene practices, such as brushing with a soft-bristled toothbrush, flossing gently, and using an antimicrobial mouthwash to reduce bacteria. You may also be advised to avoid certain foods and beverages that could irritate your gums during the healing process."
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Deep Cleaning Process',
-    }}
+
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Process of Deep Dental Cleaning</h3>
@@ -161,7 +157,7 @@ const metadata = {
       </div>
       <br/>
       <div>
-        <strong>Reduced Risk of Tooth Loss</strong>: Gum disease is one of the leading causes of tooth loss in adults. By treating gum disease with deep cleaning, you can preserve your natural teeth and avoid the need for more invasive treatments, such as extractions or dental implants.
+        <strong>Reduced Risk of <a href="/extraction">Tooth Loss</a></strong>: Gum disease is one of the leading causes of tooth loss in adults. By treating gum disease with deep cleaning, you can preserve your natural teeth and avoid the need for more invasive treatments, such as extractions or dental implants.
       </div>
       <br/>
       <div>
@@ -173,7 +169,7 @@ const metadata = {
       </div>
       <br/>
       <div>
-        <strong>A More Attractive Smile</strong>: Deep cleaning not only improves the health of your gums but also enhances the appearance of your smile. By removing tartar and stains from the teeth, deep cleaning can help to restore a brighter, more attractive smile. This can boost your self-esteem and encourage you to maintain good oral hygiene habits.
+        <strong>A More <a href="/cosmetic">Attractive Smile</a> </strong>: Deep cleaning not only improves the health of your gums but also enhances the appearance of your smile. By removing tartar and stains from the teeth, deep cleaning can help to restore a brighter, more attractive smile. This can boost your self-esteem and encourage you to maintain good oral hygiene habits.
       </div>
     </Fragment>
   </Content>
