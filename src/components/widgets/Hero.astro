@@ -1,6 +1,8 @@
 ---
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro'; 
+
 
 import type { Hero as Props } from '~/types';
 
@@ -84,6 +86,12 @@ const {
             </div>
           )
         }
+      </div>
+
+    </div>
+    <div class="basis-1/12">
+      <div class="relative m-auto max-w-3xl">
+        <ContactForm /> <!-- Embed the ContactForm component here -->
       </div>
     </div>
   </div>

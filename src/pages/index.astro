@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -25,14 +25,16 @@ const metadata = {
         icon: 'tabler:calendar',
       }
     ]}
-    image={{ src: '~/assets/images/smilingwoman.png', alt: 'Implant and Cosmetic Dentist in Atlanta' }}
   >
     <Fragment slot="title">
-      <span class="text-green">Trust, Compassion, and Expertise</span>  
+      <span class="text-white">Trust, Compassion, and Expertise</span>  
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="text-justify text-black dark:text-white">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
+      <span class="text-justify text-white dark:text-white">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="h-full w-full bg-cover bg-center" style="background-image: url('src/assets/images/smilingwoman.png');"></div>
     </Fragment>
   </Hero>
 
