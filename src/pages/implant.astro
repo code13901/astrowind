@@ -11,20 +11,23 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <div class="pt-[72px] md:pt-[88px]">
   <Hero
-    tagline="Dental Implants"
+    tagline="Dental Implants in Atlanta"
     title="Restore Your Smile with Dental Implants – The Permanent Solution for Missing Teeth"
-    subtitle="Dental implants are the most effective and permanent solution to missing teeth. At our practice, we offer state-of-the-art dental implant procedures that look, feel, and function like your natural teeth. Whether you've lost teeth due to decay, injury, or aging, dental implants can help restore both your smile and your confidence. Located in Dunwoody suburb of metro Atlanta area, we specialize in providing expert dental implant care in a warm and welcoming environment. Take the first step toward a more confident smile today."
-
     actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}
-    image={{
-      src: '~/assets/images/dental_implants.png',
-      alt: 'Dental Implants',
-    }}
-  />
-  </div>
-  
+>
+<Fragment slot="subtitle">
+  <p>Receive expert care and customized solutions for all your dental implant needs, including:</p>
+  <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
+    <li>Single Tooth Implants</li>
+    <li>Implant-Supported Bridges</li>
+    <li>Full Arch Implants</li>
+    <li>Bone Grafting for Implants</li>
+    <li>All-on-4® Implants</li>
+    <li>Implant Maintenance and Care</li>
+  </ul>
+</Fragment>
+</Hero>
   <!-- Content Widget **************** -->
 
 <Content
@@ -51,6 +54,10 @@ const metadata = {
         'Not everyone is an immediate candidate for dental implants. You need to have healthy gums and enough bone structure to support the implant. If your jawbone has deteriorated, a bone graft may be necessary. People with certain conditions like uncontrolled diabetes or heavy smokers may need additional treatment or alternatives. [Learn more about bone grafting](#).',
     },
   ]}
+      image={{
+        src: '~/assets/images/dental_implants.png',
+        alt: 'Dental Implants in Atlanta',
+      }}
 
 >
 
@@ -83,7 +90,7 @@ const metadata = {
       {
         title: 'Healing and Crown Placement',
         description:
-        "Once the implant has fused with the bone, the next step is placing the abutment and then the custom-made crown. This crown will be created to match the shape, color, and size of your surrounding teeth for a natural look."
+        "Once the implant has fused with the bone, the next step is placing the abutment and then the custom-made <a href='/implantcrown'>crown</a>. This crown will be created to match the shape, color, and size of your surrounding teeth for a natural look."
       },
     ]}
     image={{
@@ -110,7 +117,7 @@ const metadata = {
   </div>
   <br/>
   <ul>
-    <li><strong>Durability</strong>: With proper care, dental implants can last a lifetime, making them a cost-effective, long-term solution for tooth loss.</li>
+    <li><strong>Durability</strong>: With proper care, dental implants can last a lifetime, making them a cost-effective, long-term solution for <a href='/extraction'>tooth loss</a>.</li>
     <li><strong>Improved Confidence</strong>: Implants allow you to speak, smile, and eat without worrying about discomfort or slippage.</li>
     <li><strong>Preserved Bone Health</strong>: Implants prevent bone loss by stimulating the jawbone, maintaining facial structure and preventing the sunken appearance that can come with missing teeth.</li>
     <li><strong>Enhanced Aesthetics</strong>: Implants look and feel like natural teeth, improving your smile and self-esteem.</li>
@@ -145,7 +152,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How to Care for Your Dental Implants</h3>
-      <p>Dental implants require care just like your natural teeth. By following a proper oral hygiene routine, you can ensure that your implants last a lifetime.</p>
+      <p>Dental implants require care just like your natural teeth. By following a proper <a href='/cleaning' class="text-primary dark:text-white">oral hygiene routine</a>, you can ensure that your implants last a lifetime.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

@@ -5,7 +5,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Cosmetic Dentistry | Life.Dental - Enhance Your Smile',
+  title: 'Cosmetic Dentist Atlanta | Life.Dental - Enhance Your Smile',
 };
 ---
 
@@ -13,15 +13,23 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Cosmetic Dentistry"
-    title="Enhance Your Smile with Cosmetic Dentistry"
-    subtitle="At Life.Dental, our cosmetic dentistry services are designed to give you the radiant smile you've always desired. From dental bonding to porcelain veneers and teeth whitening, we use the latest techniques to transform your smile."
+    tagline="Cosmetic Dentist Atlanta"
+    title="Transform Your Smile with Cosmetic Dentistry"
     actions={[{ variant: 'primary', target: '_blank', text: 'Book an Appointment', href: '/contact' }]}
-    image={{
-      src: '~/assets/images/cosmetic-dentistry.jpg',
-      alt: 'Cosmetic Dentistry',
-    }}
-  />
+
+  >
+  <Fragment slot="subtitle">
+    <p>Experience expert care and personalized attention for all your cosmetic dentistry needs, including:</p>
+    <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
+      <li>Teeth Whitening</li>
+      <li>Porcelain Veneers</li>
+      <li>Dental Bonding</li>
+      <li>Invisalign and Clear Aligners</li>
+      <li>Gum Contouring</li>
+      <li>Smile Makeovers</li>
+    </ul>
+</Fragment>
+  </Hero>
 
   <!-- Content Widget **************** -->
 
@@ -48,8 +56,12 @@ const metadata = {
       description:
         'At Life.Dental, we offer professional teeth whitening services that can remove years of stains and discoloration, leaving you with a brighter, whiter smile. Our in-office and at-home whitening options are safe, effective, and customized to your desired level of whitening.',
     },
+    
   ]}
-
+    image={{
+      src: '~/assets/images/cosmetic-dentistry.jpg',
+      alt: 'Cosmetic Dentistry',
+    }}
 >
 
     <Fragment slot="content">

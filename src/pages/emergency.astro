@@ -6,195 +6,106 @@ import Hero from '~/components/widgets/Hero2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Emergency Dental Treatment in Atlanta',
-  description: 'Emergency Dental Treatment in Atlanta, Dunwoody, Chamblee, Sandy Springs',
+  title: 'Excellence in Dentistry - Kois Center Trained Dentist',
+  description: 'Dr. Ketan Ginoya - Kois Center Trained Dentist delivering advanced care in Atlanta.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero
-  tagline="Emergency Dentist near me"
-  title="Same-Day Emergency Dentistry in Atlanta"
-  actions={[{ variant: 'primary', target: '_blank', text: 'Call for Immediate Assistance', href: 'tel:+14048069799' }]}>
+  tagline="Excellence in Dentistry Backed by Kois Center Training"
+  title="Dr. Ketan Ginoya - Kois Center Trained Dentist"
+  actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}>
   
   <!-- Subtitle Slot -->
   <Fragment slot="subtitle">
-    <p>We give prompt attention to all dental emergencies including:</p>
+    <p>At Life.Dental, we are committed to providing the highest standard of dental care, and our expertise is supported by world-class training from the Kois Center. Here's how our training benefits you:</p>
     <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
-      <li>Severe Toothache</li>
-      <li>Knocked-Out Tooth</li>
-      <li>Chipped or Broken Tooth</li>
-      <li>Lost Filling or Crown</li>
-      <li>Abscess or Infection</li>
-      <li>Soft Tissue Injuries</li>
+      <li>Evidence-Based Care</li>
+      <li>Cutting-Edge Technology</li>
+      <li>Comprehensive Dental Solutions</li>
+      <li>Personalized Treatment Plans</li>
     </ul>
   </Fragment>
+
+  <!-- Testimonial Slot -->
   <Fragment slot="testimonial">
-    "Excellent coordination from staff and removal of wisdom tooth from Dr.Ketan. Highly recommend this dental practice to anyone"
+    "Dr. Ketan's expertise and the personalized care I received were exceptional. I trust Life.Dental for all my dental needs."
   </Fragment>
 
   <!-- Author Slot -->
   <Fragment slot="author">
-      Paul
+      Sarah M.
   </Fragment>
 </Hero>
 
   <!-- Content Widget **************** -->
-
 <Content
   isReversed={true}  
   items={[
     {
-      title: 'Severe Toothache',
+      title: 'What Is the Kois Center?',
       description:
-        'A severe toothache can indicate various issues, such as deep decay, an abscess, or a cracked tooth. This pain can be sharp, throbbing, or constant, and it often worsens with chewing or exposure to hot or cold temperatures. If you experience a persistent toothache that lasts more than a day, or if it is accompanied by swelling, fever, or pus, immediate dental care is essential. Delaying treatment can lead to more serious complications and the need for more extensive care.',
+        'The Kois Center is one of the most prestigious educational centers for dentists globally. It offers an advanced, graduate-level curriculum focused on esthetics, implants, and restorative dentistry. The Kois Center is known for its independent research and cutting-edge technology, ensuring every treatment is based on solid scientific evidence.',
     },
     {
-      title: 'Knocked-Out Tooth',
+      title: 'What Does Kois Center Training Mean for You?',
       description:
-        'A knocked-out tooth, also known as an avulsed tooth, is a serious emergency that requires prompt attention. If the tooth is handled correctly and treated quickly, there is a good chance it can be saved. Contact our office immediately and follow our instructions to preserve the tooth and increase the likelihood of successful reimplantation.',
+        'Choosing a Kois-trained dentist means selecting a professional who has dedicated themselves to mastering the latest techniques in comprehensive dental care. This ensures you receive care that is backed by the latest research, delivered with cutting-edge technology, and personalized to meet your specific needs.',
     },
     {
-      title: 'Chipped or Broken Tooth',
+      title: 'Why I Chose the Kois Center',
       description:
-        'Whether from a fall, a sports injury, or biting down on something hard, a chipped or broken tooth can be painful and unsightly. Depending on the severity, emergency treatment may involve smoothing the edges, applying a filling, or placing a crown to restore the tooth  is appearance and function. Immediate care helps prevent further damage and alleviates pain.',
-    },
-    {
-      title: 'Lost Filling or Crown',
-      description:
-        "If a filling or crown falls out, it can expose the underlying tooth to damage and increase sensitivity. While this situation is not as immediately painful as some other emergencies, it still requires prompt attention to prevent further complications. We offer same-day repairs to restore your tooth's integrity and protect it from future issues.",
-    },
-    {
-      title: 'Abscess or Infection',
-      description:
-        'An abscess is a serious infection that can cause significant pain and swelling. It requires immediate treatment to prevent the infection from spreading to other areas. Our team will drain the abscess and provide antibiotics to eliminate the infection, ensuring your overall health is protected.',
-    },
-    {
-      title: 'Soft Tissue Injuries',
-      description:
-        'Injuries to the gums, lips, or tongue can occur from accidents or trauma. These injuries may bleed heavily and cause pain, requiring immediate attention to manage the damage and promote healing. We provide expert care to address soft tissue injuries and ensure your recovery is smooth and complication-free.',
+        'As your dentist at Life.Dental, I chose the Kois Center because of its commitment to advancing the science of dentistry. My training at Kois ensures that I can provide you with the most effective, evidence-based treatments available, from restorative procedures to advanced implantology and esthetic solutions.',
     },
   ]}
       image={{
-        src: '~/assets/images/toothache.jpg',
-        alt: 'Emergency Dentist near me in Atlanta',
+        src: '~/assets/images/Dr.Ken.jpg',
+        alt: 'Dr. Ketan Ginoya - Kois Center Trained Dentist',
       }}
 >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Common Dental Emergencies We Treat</h3>
-      <p>Dental emergencies come in many forms, each requiring a specific approach to care. Here are some of the most common emergencies we handle and the immediate steps you should take:</p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How Kois Training Enhances Your Dental Care</h3>
+      <p>With my advanced training at the Kois Center, I bring the latest techniques and knowledge to your care. Whether you need restorative work, esthetic enhancements, or preventative treatments, my goal is to provide you with top-tier service and long-lasting results.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
+  <!-- Additional Content Widget **************** -->
   <Content
     isAfterContent
     items={[
       {
-        title: 'Immediate Assessment and Guidance',
+        title: 'Patient-Centered Approach',
         description:
-          "When you contact our office with a dental emergency, our team will quickly assess your situation over the phone. We'll ask about your symptoms, the nature of the emergency, and any relevant medical history. Based on this information, we'll provide immediate advice on how to manage your condition until you can see us in person.",
+          "At Life.Dental, our approach is always focused on you. We create personalized treatment plans that ensure your health, comfort, and long-term well-being. Whether it's routine checkups or complex procedures, our team is dedicated to providing the best care tailored to your specific needs.",
       },
       {
-        title: 'Same-Day Appointments',
+        title: 'Comprehensive Care for Every Need',
         description:
-          "Dental emergencies require urgent attention, which is why we offer same-day appointments to ensure you receive prompt care. We strive to schedule you in as quickly as possible, often within a few hours, to address your emergency and provide relief.",
-      },
-      {
-        title: 'Comprehensive Emergency Treatment',
-        description:
-          "Upon arrival, we will conduct a thorough examination, including X-rays if needed, to assess the issue fully. Once we identify the problem, we'll discuss your treatment options and proceed with the necessary care to restore your oral health. Our team is equipped to handle a wide range of emergencies efficiently.",
-      },
-      {
-        title: 'Follow-Up Care and Long-Term Solutions',
-        description:
-          "After addressing the immediate emergency, we will develop a plan for any necessary follow-up care. This may include additional appointments, further treatment, or preventive measures to protect against future emergencies. We're committed to ensuring you achieve lasting results and a healthy smile.",
+          "From esthetic treatments to advanced restorative procedures, we offer comprehensive dental solutions. Our Kois Center training allows us to integrate the latest scientific advancements into your care, ensuring optimal outcomes for everything from routine cleanings to advanced treatments.",
       },
     ]}
     image={{
-      src: '~/assets/images/toothache2.png',
-      alt: 'Emergency Dentistry near me in Dunwoody, Chamblee, Sandy Springs',
+      src: '~/assets/images/dental-expertise.jpg',
+      alt: 'Comprehensive Dental Care',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Approach to Emergency Dentistry</h3>
-      <p>At Life.Dental, we prioritize your comfort and well-being. Our emergency dental care is designed to provide compassionate, efficient, and expert treatment when you need it most. Here's how we handle your emergency from the moment you contact us:</p>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content>
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Preparing for Dental Emergencies</h3>
-      <div>
-        Dental emergencies are often unexpected, but being prepared can make a significant difference. Here are some tips to help you handle emergencies effectively and reduce the risk of serious complications:
-      </div>
-      <br />
-      <div>
-        <strong>Keep Our Contact Information Handy</strong>: Save our phone number in your contacts and post it in a visible place at home. This ensures you can reach us quickly in an emergency.
-      </div>
-      <br />
-      <div>
-        <strong>Have a Dental Emergency Kit</strong>: Consider keeping a small dental emergency kit at home and in your car. This kit might include gauze, a container for storing a knocked-out tooth, dental cement, and over-the-counter pain relievers.
-      </div>
-      <br />
-      <div>
-        <strong>Understand Basic First Aid for Dental Emergencies</strong>: Knowing how to manage common dental emergencies before seeing a dentist can make a big difference. Familiarize yourself with first aid steps to take immediately after an emergency.
-      </div>
-      <br />
-      <div>
-        <strong>Maintain Regular Dental Checkups</strong>: Many dental emergencies can be prevented with regular checkups and cleanings. Staying on top of your dental care allows potential problems to be caught early, before they escalate into emergencies.
-      </div>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content>
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose Life.Dental for Emergency Dentistry?</h3>
-      <div>
-        When a dental emergency strikes, you want to know that you're in capable, caring hands. At Life.Dental, we pride ourselves on providing fast, effective, and compassionate care for all types of dental emergencies. Here's why patients trust us with their urgent dental needs:
-      </div>
-      <br />
-      <div>
-        <strong>Expertise and Experience</strong>: Our dental team has extensive experience in handling a wide range of dental emergencies. From complex cases to routine issues, we have the skills and knowledge to provide the highest level of care.
-      </div>
-      <br />
-      <div>
-        <strong>State-of-the-Art Facilities</strong>: We use the latest dental technology and techniques to ensure that you receive the best possible treatment. Our modern facilities are equipped to handle all types of emergencies, from advanced imaging to on-the-spot restorations.
-      </div>
-      <br />
-      <div>
-        <strong>Compassionate Care</strong>: We understand that dental emergencies can be stressful and painful. Our team is dedicated to providing gentle, patient-centered care that puts your comfort first. We'll take the time to listen to your concerns and explain every step of your treatment.
-      </div>
-      <br />
-      <div>
-        <strong>Convenient Same-Day Appointments</strong>: We know that time is of the essence when it comes to dental emergencies. That's why we offer same-day appointments to ensure that you get the care you need right away. We'll do everything we can to accommodate your schedule and provide prompt relief.
-      </div>
-      <br />
-      <div>
-        <strong>Comprehensive Dental Services</strong>: In addition to emergency care, we offer a full range of dental services to meet all your oral health needs. Whether you need a follow-up visit, <a href="/cleaning" class="text-blue-500 hover:text-blue-600">preventive care</a>, or a cosmetic treatment, we're here to support your long-term dental health.We also offer <a href="/dental-implants" class="text-blue-500 hover:text-blue-600">dental implants</a>, <a href="/dental-crowns" class="text-blue-500 hover:text-blue-600">dental crowns</a>, and <a href="/dental-bridges" class="text-blue-500 hover:text-blue-600">dental bridges</a>.
-      </div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advanced Dental Techniques at Your Service</h3>
+      <p>My Kois training ensures I stay at the forefront of modern dentistry, so you receive treatments that are safe, effective, and designed for your specific oral health goals. From Invisalign to implants, you're in expert hands at Life.Dental.</p>
     </Fragment>
   </Content>
 
   <!-- Call to Action **************** -->
-
   <CallToAction
-    title="Take Action: Don't Wait to Get the Help You Need"
-    subtitle="Dental emergencies are unpredictable and can be incredibly disruptive, but you don't have to face them alone. At Life.Dental, we're here to provide the expert care you need, exactly when you need it. If you're experiencing a dental emergency, don't hesitate—call us immediately to schedule a same-day appointment."
+    title="Ready for Exceptional Dental Care?"
+    subtitle="Schedule your consultation today and experience the difference a Kois Center-trained dentist can make in your smile!"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Contact Us Today', href: '/contact' },
+      { variant: 'primary', target: '_blank', text: 'Book Now', href: '/contact' },
     ]}
   />
   
