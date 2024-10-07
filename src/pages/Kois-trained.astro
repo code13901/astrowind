@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Life.Dental - Excellence in Dentistry',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Kois Center Trained Dentist"
+    tagline="Excellence in Dentistry Backed by Kois Center Training"
+  >
+    <Fragment slot="subtitle">
+      <p>At Life.Dental, we are committed to providing the highest standard of dental care, and our expertise is supported by world-class training from the Kois Center. Here's how our training benefits you:</p>
+      <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
+        <li>Evidence-Based Care</li>
+        <li>Cutting-Edge Technology</li>
+        <li>Comprehensive Dental Solutions</li>
+        <li>Personalized Treatment Plans</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="content">
+      <div class="flex justify-center mt-8">
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/dVn5nIt_OCo?si=QALGFagWZRkHBnm0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed={false}  
+  items={[
+    {
+      title: 'What Is the Kois Center?',
+      description:
+        'The Kois Center is one of the most prestigious educational centers for dentists globally. It offers an advanced, graduate-level curriculum focused on the latest innovations in esthetics, implants, and restorative dentistry. The Kois Center is renowned for its independent research, cutting-edge technology, and continuous improvement, ensuring that dentists trained here are always at the forefront of modern dentistry.',
+    },
+    {
+      title: 'What Does Kois Center Training Mean for You?',
+      description:
+        'Choosing a Kois Center-trained dentist means selecting a professional who has dedicated themselves to mastering the latest techniques in comprehensive dental care. This ensures you receive care that is based on the latest research and delivered with advanced technology. It also means a personalized treatment plan focused on your specific needs and long-term health.',
+    },
+    {
+      title: 'Why I Chose the Kois Center',
+      description:
+        'As your dentist at Life.Dental, my goal is to provide the highest level of care possible. I chose the Kois Center because of its commitment to advancing the science of dentistry. My training at Kois ensures that I can provide you with the most effective, evidence-based treatments available, from restorative procedures to advanced implantology and esthetic solutions.',
+    },
+    {
+      title: 'Your Smile Deserves the Best',
+      description:
+        'By selecting a Kois-trained dentist, you’re choosing quality, safety, and modern care. Whether you need restorative work, esthetic enhancements, or preventative care, I am here to guide you through every step with the expertise gained from one of the most respected institutions in the world.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/dentistry-kois-center.jpg',
+    alt: 'Kois Center Dentistry Training',
+  }}
+>
+
+  <Fragment slot="content">
+    <h3 class="text-3xl font-semibold mb-4">Excellence in Dentistry Backed by Kois Center Training</h3>
+    <p>At Life.Dental, we are committed to providing the highest standard of dental care, and our expertise is supported by world-class training from the Kois Center. As a Kois Center-trained dentist, I, Dr. Ketan Ginoya, bring advanced knowledge and skills to every aspect of your dental care, ensuring you receive the best possible treatment.</p>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+
+
+</Layout>

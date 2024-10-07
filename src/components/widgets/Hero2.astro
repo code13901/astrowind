@@ -1,7 +1,6 @@
 ---
-import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
-import Background from '~/components/ui/Background.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro'; // Import the ContactForm component
 
 import type { Hero as Props } from '~/types';
 
@@ -9,11 +8,10 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
-
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
-
+  testimonial = await Astro.slots.render('testimonial'), // Render testimonial slot
+  author = await Astro.slots.render('author'), // Render author slot
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
@@ -40,14 +38,30 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
               set:html={title}
             />
           )
         }
+
         <div class="max-w-3xl mx-auto lg:max-w-none">
           {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
 
+          <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
+    
+          </ul>
+
+          <!-- Testimonial and Author Block -->
+          {testimonial && author && (
+            <div class="mb-8">
+              <blockquote class="italic text-lg text-gray-600 dark:text-gray-300">
+                <p>{testimonial}</p> <!-- Testimonial slot content -->
+              </blockquote>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">- {author}</p> <!-- Author slot content -->
+            </div>
+          )}
+
+          <!-- Actions Block -->
           {
             actions && (
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0 lg:max-w-7xl">
@@ -63,30 +77,19 @@ const {
               </div>
             )
           }
+
         </div>
+
         {content && <Fragment set:html={content} />}
       </div>
+
+      <!-- Replace the image section with the ContactForm component -->
       <div class="basis-1/2">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={600}
-                  height={600}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
+        <div class="relative m-auto max-w-5xl md:px-14 opacity-90">
+          <ContactForm /> <!-- Embed the ContactForm component here -->
+        </div>
       </div>
+
     </div>
   </div>
 </section>

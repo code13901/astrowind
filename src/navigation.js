@@ -10,6 +10,10 @@ export const headerData = {
           href: getPermalink('/dr-Ketan'),
         },
         {
+          text: 'Kois-trained',
+          href: getPermalink('/Kois-trained'),
+        },
+        {
           text: 'Our Team',
           href: getPermalink('/team'),
         },
@@ -47,6 +51,10 @@ export const headerData = {
         {
           text: 'Dental Crown',
           href: getPermalink('/crown'),
+        },
+        {
+          text: 'Cosmetic Dentistry',
+          href: getPermalink('/cosmetic'),
         },
         {
           text: 'Allonx',
