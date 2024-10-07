@@ -88,6 +88,10 @@ export const headerData = {
         {
           text: 'Payment Informations',
           href: getPermalink('/payment'),
+        },
+        {
+          text: 'Dental Blog',
+          href: getPermalink('/blog'),
         }
       ],
     },
