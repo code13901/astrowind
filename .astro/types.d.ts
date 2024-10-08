@@ -143,6 +143,13 @@ declare module 'astro:content' {
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".mdx"] };
+"mouthwash-teethwhitening.mdx": {
+	id: "mouthwash-teethwhitening.mdx";
+  slug: "mouthwash-teethwhitening";
+  body: string;
+  collection: "post";
+  data: InferEntrySchema<"post">
+} & { render(): Render[".mdx"] };
 };
 
 	};
