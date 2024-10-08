@@ -1,111 +1,208 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content2.astro';
 import Hero from '~/components/widgets/Hero2.astro';
-
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Excellence in Dentistry - Kois Center Trained Dentist',
-  description: 'Dr. Ketan Ginoya - Kois Center Trained Dentist delivering advanced care in Atlanta.',
+  title: 'Tooth Extraction in Dunwoody, Chamblee, Atlanta, Sandy Springs',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
+
   <Hero
-  tagline="Excellence in Dentistry Backed by Kois Center Training"
-  title="Dr. Ketan Ginoya - Kois Center Trained Dentist"
-  actions={[{ variant: 'primary', target: '_blank', text: 'Schedule a Consultation', href: '/contact' }]}>
-  
-  <!-- Subtitle Slot -->
-  <Fragment slot="subtitle">
-    <p>At Life.Dental, we are committed to providing the highest standard of dental care, and our expertise is supported by world-class training from the Kois Center. Here's how our training benefits you:</p>
-    <ul class="list-disc list-inside text-left text-muted mb-6 dark:text-slate-300">
-      <li>Evidence-Based Care</li>
-      <li>Cutting-Edge Technology</li>
-      <li>Comprehensive Dental Solutions</li>
-      <li>Personalized Treatment Plans</li>
-    </ul>
-  </Fragment>
+    tagline="Tooth Extraction"
+    title="Gentle Tooth Extractions—A Path to Better Oral Health"
+    subtitle="At our practice, we understand that the idea of tooth extraction can feel intimidating. That’s why we offer expert, gentle tooth extractions using the latest technology to ensure your comfort. Whether due to severe decay, infection, or overcrowding, our skilled team is here to help restore your oral health with minimal discomfort. Located near border of Dunwoody and Chamblee ,just outside of Atlanta Perimeter, we’re committed to providing safe and effective extractions in a stress-free environment."
 
-  <!-- Testimonial Slot -->
-  <Fragment slot="testimonial">
-    "Dr. Ketan's expertise and the personalized care I received were exceptional. I trust Life.Dental for all my dental needs."
-  </Fragment>
-
-  <!-- Author Slot -->
-  <Fragment slot="author">
-      Sarah M.
-  </Fragment>
-</Hero>
+    actions={[{ variant: 'primary', target: '_blank', text: 'Book an Appointment', href: '/contact' }]}
+    image={{
+      src: '~/assets/images/tooth_extraction.png',
+      alt: 'Tooth Extraction',
+    }}
+  />
 
   <!-- Content Widget **************** -->
-<Content
-  isReversed={true}  
-  items={[
-    {
-      title: 'What Is the Kois Center?',
-      description:
-        'The Kois Center is one of the most prestigious educational centers for dentists globally. It offers an advanced, graduate-level curriculum focused on esthetics, implants, and restorative dentistry. The Kois Center is known for its independent research and cutting-edge technology, ensuring every treatment is based on solid scientific evidence.',
-    },
-    {
-      title: 'What Does Kois Center Training Mean for You?',
-      description:
-        'Choosing a Kois-trained dentist means selecting a professional who has dedicated themselves to mastering the latest techniques in comprehensive dental care. This ensures you receive care that is backed by the latest research, delivered with cutting-edge technology, and personalized to meet your specific needs.',
-    },
-    {
-      title: 'Why I Chose the Kois Center',
-      description:
-        'As your dentist at Life.Dental, I chose the Kois Center because of its commitment to advancing the science of dentistry. My training at Kois ensures that I can provide you with the most effective, evidence-based treatments available, from restorative procedures to advanced implantology and esthetic solutions.',
-    },
-  ]}
-      image={{
-        src: '~/assets/images/Dr.Ken.jpg',
-        alt: 'Dr. Ketan Ginoya - Kois Center Trained Dentist',
-      }}
->
+
+  <Content
+    isReversed={true}  
+    items={[
+      {
+        title: 'What is Tooth Extraction?',
+        description:
+          'Tooth extraction is a procedure where a tooth is removed from its socket in the jawbone. There are two main types of tooth extractions: Simple extraction (for visible teeth) and surgical extraction (for impacted teeth or those that haven’t fully erupted). Your dentist will recommend the best option based on your specific situation.',
+      },
+      {
+        title: 'Why Tooth Extractions Are Necessary',
+        description:
+          'Tooth extractions may be necessary due to severe decay, infection, trauma, or overcrowding. Removing a tooth can help prevent further complications, such as the spread of infection, and improve your overall oral health. Extractions are often required before orthodontic treatments or when preparing for implants or dentures.',
+      },
+      {
+        title: 'Types of Tooth Extractions',
+        description:
+          'The two main types of extractions are simple and surgical. Simple extractions are performed on visible teeth and are straightforward, while surgical extractions are more complex, often involving teeth that are impacted or broken below the gum line.',
+      },
+    ]}
+  >
+
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How Kois Training Enhances Your Dental Care</h3>
-      <p>With my advanced training at the Kois Center, I bring the latest techniques and knowledge to your care. Whether you need restorative work, esthetic enhancements, or preventative treatments, my goal is to provide you with top-tier service and long-lasting results.</p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">When Is Tooth Extraction Necessary?</h3>
+      <p>There are several common reasons for tooth extraction, ranging from advanced decay to overcrowding. Here are some situations that may require a tooth extraction:</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Additional Content Widget **************** -->
+  <!-- Content Widget **************** -->
+
   <Content
     isAfterContent
     items={[
       {
-        title: 'Patient-Centered Approach',
+        title: 'Severe Decay or Infection',
         description:
-          "At Life.Dental, our approach is always focused on you. We create personalized treatment plans that ensure your health, comfort, and long-term well-being. Whether it's routine checkups or complex procedures, our team is dedicated to providing the best care tailored to your specific needs.",
+          'When tooth decay reaches deep into the tooth and affects the pulp, extraction may be necessary if root canal therapy cannot save the tooth. Infections caused by bacteria in the tooth can also spread to other areas if left untreated.',
       },
       {
-        title: 'Comprehensive Care for Every Need',
+        title: 'Gum Disease',
         description:
-          "From esthetic treatments to advanced restorative procedures, we offer comprehensive dental solutions. Our Kois Center training allows us to integrate the latest scientific advancements into your care, ensuring optimal outcomes for everything from routine cleanings to advanced treatments.",
+          'Advanced gum disease can weaken the support structures of the teeth, leading to loose or damaged teeth. In such cases, extraction may be necessary to prevent further damage to your oral health.',
+      },
+      {
+        title: 'Impacted Wisdom Teeth',
+        description:
+          'Wisdom teeth often become impacted, meaning they are unable to fully erupt through the gums. Impacted teeth can lead to pain, infections, and misalignment of other teeth, often requiring extraction.',
+      },
+      {
+        title: 'Overcrowding',
+        description:
+          'For patients preparing for orthodontic treatment, tooth extraction may be necessary to make room for other teeth to align properly. Extracting one or more teeth can create the space needed for braces or aligners to work effectively.',
       },
     ]}
     image={{
-      src: '~/assets/images/dental-expertise.jpg',
-      alt: 'Comprehensive Dental Care',
+      src: '~/assets/images/extraction_benefits.png',
+      alt: 'Tooth Extraction Benefits',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advanced Dental Techniques at Your Service</h3>
-      <p>My Kois training ensures I stay at the forefront of modern dentistry, so you receive treatments that are safe, effective, and designed for your specific oral health goals. From Invisalign to implants, you're in expert hands at Life.Dental.</p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Reasons for Tooth Extraction</h3>
+      <p>Tooth extractions are often necessary to maintain or improve your oral health. Here’s why your dentist may recommend an extraction:</p>
     </Fragment>
   </Content>
 
-  <!-- Call to Action **************** -->
-  <CallToAction
-    title="Ready for Exceptional Dental Care?"
-    subtitle="Schedule your consultation today and experience the difference a Kois Center-trained dentist can make in your smile!"
-    actions={[
-      { variant: 'primary', target: '_blank', text: 'Book Now', href: '/contact' },
+  <!-- Content Widget **************** -->
+
+  <Content >
+  <Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Tooth Extraction Process: What to Expect</h3>
+  <div>
+  The tooth extraction process varies depending on the type of extraction needed. Here's a step-by-step overview of what you can expect during both simple and surgical extractions:
+  </div>
+  <br/>
+  <ul>
+    <li><strong>Consultation and X-rays</strong>: Your dentist will first evaluate your oral health and take X-rays to assess the condition of the tooth and surrounding bone. This helps in planning the procedure.</li>
+    <li><strong>Local Anesthesia</strong>: Before extraction, local anesthesia will be administered to numb the area around the tooth, ensuring that you feel no pain during the procedure. For more complex cases, sedation may be offered.</li>
+    <li><strong>Simple Extraction</strong>: The dentist will use an instrument called an elevator to loosen the tooth before removing it with forceps.</li>
+    <li><strong>Surgical Extraction</strong>: For surgical extractions, an incision may be made in the gum, and the tooth may need to be sectioned for easier removal.</li>
+  </ul>
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Pain Management After Extraction',
+        description:
+        'Post-extraction discomfort is normal and can typically be managed with over-the-counter pain relievers such as ibuprofen. Your dentist may prescribe stronger pain relief for more complex extractions.',
+      },
+      {
+        title: 'Caring for the Extraction Site',
+        description:
+        'For the first 24 hours after extraction, it’s important to rest and avoid disturbing the extraction site. Follow your dentist’s instructions, which may include gently rinsing with warm salt water, avoiding straws, and eating soft foods.',
+      },
+      {
+        title: 'Watch for Signs of Dry Socket',
+        description:
+        'Dry socket is a condition where the blood clot at the extraction site becomes dislodged, exposing the bone. This can cause severe pain and delay healing. Avoid smoking and using straws to reduce the risk of dry socket.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/extraction_care.png',
+      alt: 'Post-Extraction Care',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Post-Extraction Care and Recovery</h3>
+      <p>After a tooth extraction, it’s crucial to follow proper aftercare instructions to ensure quick healing and to prevent complications like infection or dry socket.</p>
+    </Fragment>
+  </Content>
+
+<Content
+    isReversed
+    isAfterContent
+    items={[
+  {
+    title: 'Replacing Extracted Teeth',
+    description:
+      'It’s important to consider tooth replacement options after extraction to prevent shifting of nearby teeth, bite misalignment, and bone loss. Options include dental implants, fixed bridges, and partial dentures.',
+  },
+  {
+    title: 'Dental Implants',
+    description:
+      'Dental implants are a long-term solution that involves placing a titanium post in the jawbone to support a natural-looking crown. Implants not only restore function but also help maintain the bone structure.',
+  },
+  {
+    title: 'Fixed Bridges',
+    description:
+      'A dental bridge involves placing a false tooth between two crowns on adjacent teeth. It is a durable and aesthetic option for replacing missing teeth, but it does not offer the bone preservation benefits of an implant.',
+  },
+]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tooth Replacement Options After Extraction</h3>
+<p>
+Replacing a missing tooth is crucial to maintaining your smile, bite, and oral health. Here are the most common options available:
+</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Discover what patients have to say about their experiences working with us."
+    testimonials={[
+      {
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        name: 'Jim',
+        image: {
+          alt: 'Jim ',
+        },
+      },
+      {
+        testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
+        name: 'Paul',
+        image: {
+          alt: 'Paul',
+        },
+      },
+      {
+        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        name: 'Diane',
+        image: {
+          alt: 'Patient testimonial',
+        },
+      },
+   
     ]}
   />
   
