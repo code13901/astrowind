@@ -1,0 +1,141 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dental Bonding in Atlanta',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+    <Hero
+      tagline="Dental Bonding in Atlanta"
+      title="Transform Your Smile with Dental Bonding"
+      subtitle="Discover how dental bonding can quickly and affordably enhance your smile. Whether you're looking to fix chips, cracks, or gaps, dental bonding offers a seamless solution for a beautiful smile."
+      actions={[{ variant: 'primary', target: '_blank', text: 'Make an Appointment', href: '/contact' }]}
+    />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed={false}  
+    items={[
+      {
+        title: 'What is Dental Bonding?',
+        description:
+          'Dental bonding is a cosmetic procedure that uses a tooth-colored resin to repair chipped, cracked, or discolored teeth. It is a quick and affordable way to enhance the appearance of your smile, and the process can typically be completed in a single visit.',
+      },
+      {
+        title: 'How Does Dental Bonding Work?',
+        description:
+          'The process begins with lightly roughening the tooth surface and applying a conditioning liquid. A tooth-colored resin is then applied, shaped, and hardened with a special light. Once hardened, the bonded area is polished to match your natural teeth.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/dentalbonding.png',
+      alt: 'Dental bonding procedure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-3xl font-semibold mb-4">Why Choose Dental Bonding?</h3>
+      <p>Dental bonding offers a fast and cost-effective solution for enhancing your smile. Here are some benefits:</p>
+      <ul>
+        <li>Quick, often completed in one visit</li>
+        <li>Affordable compared to other cosmetic procedures</li>
+        <li>Non-invasive and preserves most of your natural tooth</li>
+        <li>Natural-looking results that blend seamlessly with your teeth</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Dental Bonding vs. Veneers',
+        href:'/veneers',
+        description:
+          'Dental bonding is a more affordable alternative to veneers, which require more extensive tooth preparation but offer a longer-lasting and more stain-resistant solution. While veneers may be ideal for those seeking a permanent option, bonding is a faster and more cost-effective way to fix minor imperfections.',
+      },
+      {
+        title: 'Dental Bonding vs. Teeth Whitening',
+        href:'/whitening',
+        description:
+          'Unlike Teeth , which focuses solely on improving the color of your teeth, dental bonding addresses structural issues like chips and gaps while also enhancing the color. If you are considering both treatments, it’s recommended to whiten your teeth before bonding to ensure uniform color.',
+      },
+      {
+        title: 'Dental Bonding vs. Crowns',
+        href:'/crown',
+        description:
+          'In cases where more extensive damage has occurred, a crowns may be necessary. Crowns offer more protection for severely weakened teeth, whereas dental bonding is better suited for minor cosmetic fixes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/bondingvsveneers.png',
+      alt: 'Comparison between bonding and veneers',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Dental Bonding vs. Other Procedures</h3>
+      <p>Dental bonding is just one of many cosmetic procedures available to enhance your smile. Here's how it compares to other popular treatments:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget **************** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="Hear from our happy patients who transformed their smiles with dental bonding."
+    testimonials={[
+      {
+        testimonial: `The dental bonding procedure was quick and painless. My chipped tooth looks as good as new!`,
+        name: 'Anna',
+        image: {
+          alt: 'Patient testimonial about dental bonding',
+        },
+      },
+      {
+        testimonial: `I was worried about the gap in my teeth, but dental bonding fixed it in one appointment! Highly recommend this practice.`,
+        name: 'John',
+        image: {
+          alt: 'John testimonial about dental bonding',
+        },
+      },
+    ]}
+  />
+  <FAQs
+    title="Frequently Asked Questions"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Is dental bonding painful?',
+        description:
+        "No, dental bonding is a non-invasive procedure that usually requires no anesthesia unless bonding is being done to fill a decayed tooth."
+      },
+      {
+        title: 'How do I care for bonded teeth?',
+        description:
+        "Caring for bonded teeth is simple. Brush and floss regularly, avoid biting on hard objects, and visit your dentist for routine check-ups."
+      },
+      {
+        title: 'Can dental bonding be whitened?',
+        description:
+        "No, dental bonding resin does not respond to teeth whitening treatments. If you plan to whiten your teeth, it’s best to do so before getting bonding to ensure a uniform color."
+      }
+    ]}
+/>
+
+
+</Layout>

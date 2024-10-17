@@ -1,0 +1,109 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Teeth Whitening in Atlanta with the KöR Whitening System',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+    <Hero
+      tagline="Professional Teeth Whitening in Atlanta"
+      title="Achieve a Brighter Smile with KöR Teeth Whitening"
+      subtitle="Experience long-lasting, professional teeth whitening with the KöR Whitening System in Atlanta. Whether you have tough stains or sensitive teeth, KöR can deliver amazing results."
+      actions={[{ variant: 'primary', target: '_blank', text: 'Book Your Appointment', href: '/contact' }]}
+    />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed={false}  
+    items={[
+      {
+        title: 'What is KöR Teeth Whitening?',
+        description:
+          'The KöR Whitening System is a cutting-edge, professional teeth whitening solution designed to address even the most stubborn stains, including tetracycline stains. KöR uses advanced whitening gels and patented KöR-Seal trays to whiten your teeth both in-office and at home, ensuring long-lasting, bright results without sensitivity.',
+      },
+      {
+        title: 'Why Choose KöR Whitening?',
+        description:
+          'KöR Whitening offers several advantages over traditional whitening methods. The proprietary formula of KöR’s whitening gel rejuvenates enamel, restoring your teeth’s natural ability to whiten. KöR is perfect for individuals with sensitive teeth, as it minimizes sensitivity while delivering dramatic, consistent results.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/korwhitening.png',
+      alt: 'KöR Whitening System in Atlanta',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-3xl font-semibold mb-4">Benefits of the KöR Whitening System</h3>
+      <p>Here are some reasons why KöR Whitening stands out:</p>
+      <ul>
+        <li>Effective even on deep stains, including tetracycline staining</li>
+        <li>Little to no sensitivity during or after treatment</li>
+        <li>Long-lasting whitening results with proper care</li>
+        <li>Customizable for at-home and in-office treatments</li>
+        <li>Safe for all ages and suitable for patients with sensitive teeth</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'KöR vs. Other Whitening Methods',
+        description:
+          'Compared to standard whitening methods that may use lights or lasers, KöR delivers superior, more reliable results. While [in-office whitening](/whitening) treatments with other systems can lead to inconsistent outcomes, KöR ensures optimal results by maintaining the integrity of the whitening gel through constant refrigeration, which significantly boosts its effectiveness.',
+      },
+      {
+        title: 'How KöR Works',
+        description:
+          'The KöR Whitening System involves both in-office and at-home treatments. The process includes an in-office conditioning visit, followed by 6-8 weeks of at-home whitening using custom KöR-Seal trays. You’ll finish with a final in-office session, achieving remarkable whitening results that last.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/korvslasers.png',
+      alt: 'KöR Teeth Whitening vs Other Methods',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How KöR Whitening Outperforms Other Systems</h3>
+      <p>Thanks to its scientifically advanced formula and delivery methods, KöR Whitening produces unmatched results that are safer for sensitive teeth and last longer than conventional treatments.</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget **************** -->
+
+  <Testimonials
+    title="What Our Patients Are Saying"
+    subtitle="See how the KöR Whitening System has transformed smiles."
+    testimonials={[
+      {
+        testimonial: `I was blown away by how effective the KöR Whitening System was. My teeth have never been this white, and I experienced no sensitivity at all.`,
+        name: 'Emily',
+        image: {
+          alt: 'Patient testimonial for KöR whitening in Atlanta',
+        },
+      },
+      {
+        testimonial: `KöR Whitening removed stains I thought were permanent! The process was easy, and my smile has never looked better.`,
+        name: 'David',
+        image: {
+          alt: 'David testimonial about KöR Whitening in Atlanta',
+        },
+      },
+    ]}
+  />
+
+</Layout>

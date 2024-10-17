@@ -1,0 +1,116 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dental Veneers in Atlanta',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+    <Hero
+      tagline="Dental Veneers in Atlanta"
+      title="Transform Your Smile with Custom Veneers"
+      subtitle="Veneers offer a long-lasting solution for correcting discolored, chipped, or misaligned teeth. Our expertly crafted veneers blend seamlessly with your natural smile, giving you the perfect aesthetic balance."
+      actions={[{ variant: 'primary', target: '_blank', text: 'Schedule Your Consultation', href: '/contact' }]}
+    />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed={false}  
+    items={[
+      {
+        title: 'What Are Dental Veneers?',
+        description:
+          'Dental veneers are thin, custom-made shells designed to cover the front surface of teeth. They are made from porcelain or composite resin and are bonded to your teeth to improve their appearance. Veneers are perfect for addressing cosmetic issues such as stained, chipped, or misaligned teeth.',
+      },
+      {
+        title: 'How Veneers Can Transform Your Smile',
+        description:
+          'Veneers offer a transformative solution for those looking to enhance their smile. With veneers, you can achieve whiter, straighter, and more evenly shaped teeth. They are also highly resistant to staining, ensuring your smile remains bright for years to come.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/dentalveneers.png',
+      alt: 'Dental veneers procedure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-3xl font-semibold mb-4">Why Choose Dental Veneers?</h3>
+      <p>Dental veneers are one of the most popular cosmetic treatments for a reason. Here are some benefits of choosing veneers:</p>
+      <ul>
+        <li>Natural-looking and custom-made for each patient</li>
+        <li>Durable and long-lasting, typically lasting over 10 years with proper care</li>
+        <li>Minimally invasive compared to other cosmetic treatments</li>
+        <li>Stain-resistant, keeping your smile bright</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Veneers vs. Dental Bonding',
+        href:'/bonding',
+        description:
+          'While dental bonding is an excellent solution for minor cosmetic issues, veneers provide a more durable and long-term solution. [Dental bonding](/bonding) typically lasts for several years, but veneers can last over a decade with proper care, making them a better choice for more significant aesthetic improvements.',
+      },
+      {
+        title: 'Veneers vs. Crowns',
+        href:'/crowns',
+        description:
+          'Dental Crowns are used for teeth that require more structural support due to damage or decay, while veneers are primarily used for cosmetic purposes. If your tooth is structurally sound but has aesthetic imperfections, veneers are an ideal choice for improving its appearance.',
+      },
+      {
+        title: 'Veneers vs. Teeth Whitening',
+        href:'/whitening',
+        description:
+          'While Teeth whitening is effective for brightening your smile, it may not address issues like chipped or misaligned teeth. Veneers offer a comprehensive solution by addressing both the color and shape of your teeth, giving you a complete smile makeover.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/veneersvsbonding.png',
+      alt: 'Comparison between veneers and bonding',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Veneers vs. Other Cosmetic Dental Procedures</h3>
+      <p>While veneers offer a highly customizable solution for improving your smile, it’s essential to compare them with other cosmetic procedures to find the right fit for your needs:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget **************** -->
+
+  <Testimonials
+    title="Patient testimonials"
+    subtitle="What our patients are saying about their veneer transformations."
+    testimonials={[
+      {
+        testimonial: `I had always been self-conscious about my teeth, but after getting veneers, my confidence has skyrocketed! My smile is exactly how I always dreamed it would be.`,
+        name: 'Sarah',
+        image: {
+          alt: 'Patient testimonial for dental veneers',
+        },
+      },
+      {
+        testimonial: `The veneers look so natural, and no one can even tell that they’re not my real teeth. I’m beyond happy with the results!`,
+        name: 'Michael',
+        image: {
+          alt: 'Michael testimonial about veneers',
+        },
+      },
+    ]}
+  />
+
+</Layout>
