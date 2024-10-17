@@ -117,7 +117,7 @@ export const headerData = {
       
     },
   ],
-  actions: [{ text: 'Contact Us', href: getPermalink('/contact'), target: '_blank' }],
+  actions: [{ text: 'Schedule Online', href: 'https://mychart.myoryx.com/online-schedule/index.html?realm=life-dental&univers=com', target: '_blank' }],
 };
 
 

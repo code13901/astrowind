@@ -18,7 +18,18 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <Hero >
+  <Hero 
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Schedule Online',
+      href: 'https://mychart.myoryx.com/online-schedule/index.html?realm=life-dental&univers=com',
+      target: '_blank',
+      icon: 'tabler:link',
+    },
+    { variant:'primary',text:'Contact Us', href: '/contact' },
+  ]}
+  >
     <Fragment slot="title">
       <span class="text-white">Trust, Compassion, and Expertise</span>  
     </Fragment>
@@ -29,6 +40,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="h-full w-full bg-cover bg-center" style="background-image: url('/assets/images/smilingwoman.png');"></div>
     </Fragment>
+   
   </Hero>
 
   <Content
