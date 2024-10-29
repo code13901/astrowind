@@ -158,6 +158,7 @@ export interface Price {
 
 export interface Testimonial {
   title?: string;
+  subtitle?: string;
   testimonial?: string;
   name?: string;
   job?: string;

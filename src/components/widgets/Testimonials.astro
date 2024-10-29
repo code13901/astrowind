@@ -18,28 +18,30 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto bg-blue-50 ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${isDark ? 'bg-slate-800 text-slate-200' : 'bg-blue-50 text-slate-800'} ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, name, job }) => (
-          <div class="flex h-auto">
-            <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
-              {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
+        testimonials.map(({ title, subtitle, testimonial, name, job }) => (
+          <div class="flex h-auto"> 
+            <div class={`flex flex-col p-4 md:p-6 rounded-md shadow-xl ${isDark ? 'bg-slate-700 text-slate-200 border-slate-600' : 'bg-white text-slate-800 border-slate-200'} border`}>
+              {title && <h2 class="text-lg font-medium leading-6 pb-2">{title}</h2>}
+              {subtitle && <h3 class="text-md font-normal text-slate-500 pb-4 ${isDark ? 'text-slate-800' : 'text-slate-500'}">{subtitle}</h3>}
+
               {testimonial && (
                 <blockquote class="flex-auto">
-                  <p class="text-muted">" {testimonial} "</p>
+                  <p class={`${isDark ? 'text-slate-300' : 'text-slate-600'}`}>"{testimonial}"</p>
                 </blockquote>
               )}
 
-              <hr class="border-slate-200 dark:border-slate-600 my-4" />
+              <hr class={`my-4 ${isDark ? 'border-slate-600' : 'border-slate-200'}`} />
 
               <div class="flex items-center">
                 <div class="grow">
                   {name && <p class="text-base font-semibold">{name}</p>}
-                  {job && <p class="text-xs text-muted">{job}</p>}
+                  {job && <p class={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{job}</p>}
                 </div>
               </div>
             </div>
