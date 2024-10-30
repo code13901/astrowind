@@ -35,6 +35,7 @@ apps:
   blog:
     isEnabled: true
     postsPerPage: 6
+    trailingSlash: true
 
     post:
       isEnabled: true

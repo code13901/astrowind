@@ -150,6 +150,13 @@ declare module 'astro:content' {
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".mdx"] };
+"tooth-failure-modes.mdx": {
+	id: "tooth-failure-modes.mdx";
+  slug: "tooth-failure-modes";
+  body: string;
+  collection: "post";
+  data: InferEntrySchema<"post">
+} & { render(): Render[".mdx"] };
 };
 
 	};
