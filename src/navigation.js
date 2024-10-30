@@ -3,7 +3,7 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'About US',
+      text: 'About',
       links: [
         {
           text: 'Dr. Ketan Ginoya',

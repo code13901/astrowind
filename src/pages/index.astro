@@ -8,6 +8,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Button from '~/components/ui/Button.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
 
 const metadata = {
   title: 'Life.Dental - Implant and Cosmetic Dentist in Atlanta',
@@ -78,6 +80,33 @@ const metadata = {
   </Fragment>
 </Content>
 
+<Brands
+    title="Membership"
+    images={[
+      {
+        src: '~/assets/images/american-dental-association-logo.png',
+        alt: 'American Dental Association member dentist in atlanta',
+      },
+      {
+        src: '~/assets/images/AGD_logo.png',
+        alt: 'Academy of General Dentistry fellow dentist in atlanta',
+      },
+      {
+        src: '~/assets/images/Koismentor_logo.png',
+        alt: 'Kois Mentor in Atlanta',
+      },
+
+      {
+        src: '~/assets/images/IDIA_logo.png',
+        alt: 'Implant dentist in atlanta',
+      },
+      {
+        src: '~/assets/images/GDA-logo-header.jpg',
+        alt: 'Georgia Dental Association dentist in Atlanta',
+      },
+      
+    ]}
+  />
 
 
   <!-- Content Widget **************** -->
