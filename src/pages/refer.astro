@@ -1,0 +1,44 @@
+---
+import Content from '~/components/widgets/Content2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Refer a Friend and Get $50 Credit - Life Dental',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Share a Smile, Earn Rewards!"
+    title="Refer a Friend and Earn $50 Credit Toward Your Dental Treatment"
+    subtitle="Love your smile? Share it with friends and family! Refer them to our dental practice, and when they book an appointment, you’ll receive a $50 credit toward your treatment. It's our way of saying thank you for spreading the word and helping us build a community of bright, healthy smiles."
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'How it Works',
+        description:
+          'Referring a friend is simple! Tell us whom you referred and mention the credit. Once they complete their first appointment, $50 in credit will be applied to your account for use on your next treatment. There’s no limit to the number of friends you can refer!',
+      },
+      {
+        title: 'Why Refer Us?',
+        description:
+          'Our practice is dedicated to providing gentle, expert dental care with the latest technology to ensure a comfortable experience for everyone. By referring friends, you’re helping them experience top-quality care while also earning rewards for yourself.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/referafriend.png',
+      alt: 'Refer a friend and earn $50 credit for dental treatment',
+    }}
+  />
+
+  
+  
+</Layout>
