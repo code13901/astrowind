@@ -7,11 +7,11 @@ export const headerData = {
       links: [
         {
           text: 'Dr. Ketan Ginoya',
-          href: getPermalink('/dr-Ketan'),
+          href: getPermalink('/dr-Ketan/'),
         },
         {
           text: 'Kois-trained',
-          href: getPermalink('/Kois-trained'),
+          href: getPermalink('/Kois-trained/'),
         },
         // {
         //   text: 'Our Team',
@@ -19,11 +19,11 @@ export const headerData = {
         // },
         {
           text: 'Why us?',
-          href: getPermalink('/whyus'),
+          href: getPermalink('/whyus/'),
         },
         {
           text: 'Tour our office',
-          href: getPermalink('/touroffice'),
+          href: getPermalink('/touroffice/'),
         },
         // {
         //   text: 'Our technologies',
@@ -31,70 +31,70 @@ export const headerData = {
         // },
       ],
     },
-    { text: 'Emergency', href: getPermalink('/emergency'), },
+    { text: 'Emergency', href: getPermalink('/emergency/'), },
 
     {
       text: 'Services',
       links: [
         {
           text: 'Dental Cleaning',
-          href: getPermalink('/cleaning'),
+          href: getPermalink('/cleaning/'),
         },
         {
           text: 'Deep Cleaning',
-          href: getPermalink('/deepcleaning'),
+          href: getPermalink('/deepcleaning/'),
         },
         {
           text: 'Root Canal Treatment',
-          href: getPermalink('/rct'),
+          href: getPermalink('/rct/'),
         },
         {
           text: 'Dental Crown',
-          href: getPermalink('/crown'),
+          href: getPermalink('/crown/'),
         },
         {
           text: 'Cosmetic Dentistry',
-          href: getPermalink('/cosmetic'),
+          href: getPermalink('/cosmetic/'),
         },
         {
           text: 'Allonx',
-          href: getPermalink('/allonx'),
+          href: getPermalink('/allonx/'),
         },
         {
           text: 'Bridge',
-          href: getPermalink('/bridge'),
+          href: getPermalink('/bridge/'),
         },
         {
           text: 'Implant',
-          href: getPermalink('/implant'),
+          href: getPermalink('/implant/'),
         },
         {
           text: 'Implant Crown and Bridge',
-          href: getPermalink('/implantcrown'),
+          href: getPermalink('/implantcrown/'),
         },
         {
           text: 'Extraction',
-          href: getPermalink('/extraction'),
+          href: getPermalink('/extraction/'),
         },
         {
           text: 'Dentures',
-          href: getPermalink('/denture'),
+          href: getPermalink('/denture/'),
         },
         {
           text: 'Invisalign',
-          href: getPermalink('/invisalign'),
+          href: getPermalink('/invisalign/'),
         },
         {
           text: 'Dental Bonding',
-          href: getPermalink('/bonding'),
+          href: getPermalink('/bonding/'),
         },
         {
           text: 'Dental Veneers',
-          href: getPermalink('/veneers'),
+          href: getPermalink('/veneers/'),
         },
         {
           text: 'Teeth Whitening',
-          href: getPermalink('/whitening'),
+          href: getPermalink('/whitening/'),
         },
       ],
     },
@@ -103,17 +103,17 @@ export const headerData = {
       links: [
         {
           text: 'Payment Informations',
-          href: getPermalink('/payment'),
+          href: getPermalink('/payment/'),
         },
         {
           text: 'Dental Blog',
-          href: getPermalink('/blog'),
+          href: getPermalink('/blog/'),
         }
       ],
     },
     {
       text: 'Smile Gallery',
-          href: getPermalink('/smilegallery'),
+          href: getPermalink('/smilegallery/'),
       
     },
   ],
