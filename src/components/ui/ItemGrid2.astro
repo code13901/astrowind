@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
 
 // Destructure the props passed to the component
-const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+const { items = [], defaultIcon = '', classes = {} } = Astro.props;
 
 const {
   container: containerClass = '',
@@ -22,46 +22,38 @@ const {
   items && (
     <div
       class={twMerge(
-        `grid gap-8 gap-x-12 sm:gap-y-8 ${
-          columns === 4
-            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
-            : columns === 3
-              ? 'lg:grid-cols-3 sm:grid-cols-2'
-              : columns === 2
-                ? 'sm:grid-cols-2 '
-                : ''
-        }`,
+        `grid gap-8 gap-x-12 sm:gap-y-8`,
         containerClass
       )}
     >
       {items.map(({ title, description, icon, callToAction, classes: itemClasses = {}, url }) => (
         url ? (
-          <a href={url} class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+          <a href={url} class={twMerge('relative flex flex-col h-full', panelClass, itemClasses?.panel)}>
             {(icon || defaultIcon) && (
               <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
             )}
             <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
             {description && (
-              <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+              <p class={twMerge('text-muted mt-2 flex-grow', descriptionClass, itemClasses?.description)} set:html={description} />
             )}
             {callToAction && (
-              <div class="mt-2">
-                <Button {...callToAction} />
+              <div class="mt-auto pt-4">
+                <Button {...callToAction} class="w-full text-center justify-center" />
               </div>
             )}
           </a>
         ) : (
-          <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+          <div class={twMerge('relative flex flex-col h-full', panelClass, itemClasses?.panel)}>
             {(icon || defaultIcon) && (
               <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
             )}
             <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
             {description && (
-              <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+              <p class={twMerge('text-muted mt-2 flex-grow', descriptionClass, itemClasses?.description)} set:html={description} />
             )}
             {callToAction && (
-              <div class="mt-2">
-                <Button {...callToAction} />
+              <div class="mt-auto pt-4">
+                <Button {...callToAction} class="w-full text-center justify-center" />
               </div>
             )}
           </div>
