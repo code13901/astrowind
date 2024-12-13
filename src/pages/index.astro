@@ -28,16 +28,22 @@ const metadata = {
       href: 'https://mychart.myoryx.com/online-schedule/index.html?realm=life-dental&univers=com',
       target: '_blank',
       icon: 'tabler:link',
+      class: 'rounded-full font-medium bg-[#6CC799] hover:bg-[#5AB486]'
     },
-    { variant:'primary',text:'Contact Us', href: '/contact/' },
+    { 
+      variant:'primary',
+      text:'Contact Us', 
+      href: '/contact/',
+      class: 'rounded-full font-medium bg-[#6CC799] hover:bg-[#5AB486]'
+    },
   ]}
   >
     <Fragment slot="title">
-      <span class="text-white">Trust, Compassion, and Expertise</span>  
+      <span class="text-white text-5xl md:text-6xl font-bold leading-tight">Trust, Compassion, and Expertise</span>  
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="text-justify text-white dark:text-white">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
+      <span class="text-xl md:text-2xl text-white dark:text-white opacity-90">Your journey to a healthier, brighter smile starts here with our expert and caring team.</span> 
     </Fragment>
     <Fragment slot="bg">
       <div class="h-full w-full bg-cover bg-center" style="background-image: url('/assets/images/smilingwoman.webp');"></div>
@@ -48,11 +54,13 @@ const metadata = {
 
   <Content
   id="about"
-  
+  isAfterContent
+  classes={{ container: 'max-w-6xl mx-auto', content: 'md:pr-12' }}
   image={{
     src: '~/assets/images/Dr.Ken.jpg',
     alt: 'Dr.Ketan Ginoya, Implant and Cosmetic Dentist in Atlanta',
     loading: 'eager',
+    class: 'rounded-2xl shadow-lg'
   }}
 >
   <Fragment slot="content">
@@ -110,9 +118,9 @@ const metadata = {
 
 
   <!-- Content Widget **************** -->
-
   <Content
     isReversed
+    classes={{ container: 'max-w-6xl mx-auto' }}
     items={[
       {
         title: 'Our Mission',
@@ -144,46 +152,60 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
- 
-<Testimonials 
+  <!-- Testimonials Widget **************** -->
+  <Testimonials 
     title="Patient testimonials"
+    subtitle="What our patients say about us"
+    classes={{ container: 'max-w-6xl mx-auto', title: 'text-3xl md:text-4xl font-bold mb-8' }}
     testimonials={[
       {
-        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share.  Dr Ketan was very professional and patient with me.`,
+        testimonial: `The staff was friendly, knowledgeable and caring. They always had a smile to share. Dr Ketan was very professional and patient with me.`,
         name: 'Jim',
+        job: 'Patient',
         image: {
-          alt: 'Jim ',
+          src: '~/assets/images/avatar.png',
+          alt: 'Jim',
+          class: 'rounded-full shadow-lg'
         },
       },
       {
         testimonial: `Excellent coordination from staff and removal of wisdom tooth from Dr.Ken. Highly recommend this dental practice to anyone`,
         name: 'Paul',
+        job: 'Patient',
         image: {
+          src: '~/assets/images/avatar.png',
           alt: 'Paul',
+          class: 'rounded-full shadow-lg'
         },
       },
       {
-        testimonial: ` Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
+        testimonial: `Dr. Ketan and staff are very professional and competent! This is patient centered dentistry. I am pleased with the work they did in making a crown for a front tooth.`,
         name: 'Diane',
+        job: 'Patient',
         image: {
+          src: '~/assets/images/avatar.png',
           alt: 'Patient testimonial',
+          class: 'rounded-full shadow-lg'
         },
       },
-   
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#F8FCFA] dark:bg-transparent"></div>
+    </Fragment>
+  </Testimonials>
 
   <Features2
   title="Our Services"
+  subtitle="Comprehensive dental care tailored to your needs"
+  classes={{ container: 'max-w-6xl mx-auto', title: 'text-3xl md:text-4xl font-bold mb-8' }}
   items={[
     {
       title: 'Implant',
       description: 'Secure your smile with dental implants, the permanent solution for missing teeth that restores function and confidence.',
       icon: 'healthicons:odontology-implant',
       callToAction: {
-        text: 'Learn More',
+        text: 'Learn More about Implant',
         href: '/implant/',
         alt: 'Implant Dentist near me in Atlanta'
       }
@@ -193,7 +215,7 @@ const metadata = {
       description: 'Enhance your smile with cosmetic dentistry, designed to make a lasting first impression with every interaction.',
       icon: 'healthicons:dental-hygiene-outline',
       callToAction: {
-        text: 'Learn More',
+        text: 'Learn More about Cosmetic Dentistry',
         href: '/cosmetic/',
         alt: 'Cosmetic Dentist near me in Atlanta'
       }
@@ -203,7 +225,7 @@ const metadata = {
       description: 'Restore strength and beauty to damaged teeth with custom dental crowns, offering protection and natural appearance.',
       icon: 'healthicons:heart-outline',
       callToAction: {
-        text: 'Learn More',
+        text: 'Learn More about Crown',
         href: '/crown/',
         alt: 'Crown Dentist near me in Atlanta'
       }
@@ -213,7 +235,7 @@ const metadata = {
       description: 'Straighten your teeth discreetly with Invisalign—clear aligners that fit your lifestyle without the need for braces.',
       icon: 'healthicons:heartbeat-outline',
       callToAction: {
-        text: 'Learn More',
+        text: 'Learn More about Invisalign',
         href: '/invisalign/',
         alt: 'Invisalign Dentist near me in Atlanta'
       }
@@ -223,7 +245,7 @@ const metadata = {
       description: 'Get immediate care for unexpected dental issues with our prompt and reliable emergency services.',
       icon: 'healthicons:accident-and-emergency-outline',
       callToAction: {
-        text: 'Learn More',
+        text: 'Learn More about Emergency',
         href: '/emergency/',
         alt: 'Emergency Dentist near me in Atlanta'
       }
@@ -251,11 +273,10 @@ const metadata = {
   />
 
   <!-- FAQs Widget ******************* -->
-
   <FAQs
     title="Frequently Asked Questions"
     tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+    classes={{ container: 'max-w-6xl mx-auto' }}
     items={[
       {
         title: 'How often should I visit the dentist?',
@@ -289,7 +310,6 @@ const metadata = {
     ]}
   />
   <!-- Google tag (gtag.js) -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16697919472"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
