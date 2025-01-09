@@ -77,32 +77,28 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex text-default md:overflow-visible md:justify-center"
+      class="items-center w-full md:w-auto fixed md:relative top-[72px] md:top-0 left-0 h-[calc(100vh-72px)] md:h-auto bg-white dark:bg-slate-900 md:bg-transparent overflow-y-auto md:overflow-visible hidden md:flex text-default md:justify-center"
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:items-center md:gap-2"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-base md:text-[0.95rem] tracking-normal font-medium pb-24 md:pb-0 md:items-center md:gap-1"
       >
         {
           links.map(({ text, href, links }) => (
             <li class={links?.length ? 'dropdown relative group' : ''}>
               {links?.length ? (
                 <>
-                  <button type="button" class="hover:text-[#6CC799] transition-colors duration-200 px-4 py-3 flex items-center rounded-md">
-                    {text}{' '}
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline transition-transform duration-200 group-hover:rotate-180" />
+                  <button class="flex items-center px-4 py-3 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200">
+                    {text}
+                    <Icon name="tabler:chevron-down" class="w-4 h-4 ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />
                   </button>
-                  <ul class="dropdown-menu md:absolute md:flex-col md:min-w-[220px] md:max-h-[85vh] md:overflow-y-auto 
-                    bg-white dark:bg-slate-900 pl-4 md:pl-0 md:hidden group-hover:md:block rounded-xl
-                    md:shadow-lg md:mt-2 border border-gray-100 dark:border-gray-800
-                    transform origin-top-right transition-all duration-200 ease-out">
+                  <ul class="dropdown-menu pl-4 md:pl-0 md:hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px]
+                    md:bg-white dark:md:bg-slate-900 md:shadow-lg md:rounded-md py-2 md:border border-gray-100 dark:border-gray-800
+                    space-y-1">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
-                          class:list={[
-                            'block py-2.5 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-[#6CC799] transition-colors duration-200',
-                            { 'text-[#6CC799]': href2 === currentPath },
-                          ]}
+                          class="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors duration-200"
                           href={href2}
                         >
                           {text2}
@@ -114,8 +110,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               ) : (
                 <a
                   class:list={[
-                    'hover:text-[#6CC799] dark:hover:text-white px-4 py-3 flex items-center transition-colors duration-200 rounded-md',
-                    { 'text-[#6CC799]': href === currentPath },
+                    'block px-4 py-3 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200',
+                    { 'text-[#6CC799] font-semibold': href === currentPath },
                   ]}
                   href={href}
                 >
@@ -152,12 +148,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4 inline-flex items-center gap-3">
               {actions.map((btnProps) => (
-                <Button {...btnProps} class="rounded-full py-2.5 px-6 font-medium text-sm w-auto text-white bg-[#6CC799] hover:bg-[#5AB486] transition-colors duration-200" />
+                <Button {...btnProps} class="rounded-md py-2 px-4 font-semibold text-[15px] text-white bg-[#6CC799] hover:bg-[#5AB486] transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" />
               ))}
               <Button 
                 text="404-806-9799" 
                 href="tel:404-806-9799" 
-                class="rounded-full py-2.5 px-6 font-medium text-sm w-auto text-white bg-[#6CC799] hover:bg-[#5AB486] transition-colors duration-200" 
+                class="rounded-md py-2 px-4 font-semibold text-[15px] text-white bg-[#6CC799] hover:bg-[#5AB486] transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ml-3" 
               />
             </span>
           ) : (
