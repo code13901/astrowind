@@ -1,0 +1,170 @@
+---
+interface PhotoPair {
+  beforeImage: string;
+  afterImage: string;
+  label?: string;
+  href?: string;
+}
+
+interface Props {
+  photoPairs: PhotoPair[];
+  title?: string;
+  subtitle?: string;
+}
+
+const { photoPairs, title, subtitle } = Astro.props;
+---
+
+<div class="max-w-6xl mx-auto px-4 py-12">
+  {title && <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">{title}</h2>}
+  {subtitle && <p class="text-xl text-gray-600 text-center mb-8">{subtitle}</p>}
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+    {photoPairs.map((pair) => (
+      <div class="relative group">
+        <div class="relative before-after-container">
+          <img src={pair.beforeImage} alt="Before" class="w-full h-64 object-cover rounded-lg" />
+          <div class="after-image absolute inset-0">
+            <img src={pair.afterImage} alt="After" class="w-full h-64 object-cover rounded-lg" />
+          </div>
+          <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize touch-manipulation">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8M8 12h8m-8 5h8"></path>
+              </svg>
+            </div>
+          </div>
+          {pair.label && (
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 rounded-b-lg">
+              <p class="text-center">{pair.label}</p>
+            </div>
+          )}
+        </div>
+        {pair.href && (
+          <div class="text-center mt-4">
+            <a 
+              href={pair.href}
+              class="inline-flex items-center justify-center px-6 py-2 text-base font-medium text-white bg-[#6CC799] hover:bg-[#5AB486] rounded-full transition duration-150 ease-in-out"
+            >
+              Learn More
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .before-after-container {
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  .after-image {
+    clip-path: inset(0 0 0 50%);
+    transition: clip-path 0.1s ease-out;
+    pointer-events: none;
+  }
+
+  .slider-handle {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    touch-action: none;
+  }
+</style>
+
+<script>
+  function initBeforeAfter() {
+    const containers = document.querySelectorAll('.before-after-container');
+    
+    containers.forEach(container => {
+      const handle = container.querySelector('.slider-handle') as HTMLElement;
+      const afterImage = container.querySelector('.after-image') as HTMLElement;
+      let isDragging = false;
+
+      function updateSlider(clientX: number) {
+        const rect = container.getBoundingClientRect();
+        const containerWidth = rect.width;
+        const x = Math.max(0, Math.min(clientX - rect.left, containerWidth));
+        const percentage = (x / containerWidth) * 100;
+        
+        handle.style.left = `${percentage}%`;
+        afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+      }
+
+      function onStart(e: MouseEvent | TouchEvent) {
+        e.preventDefault();
+        isDragging = true;
+        
+        if (e instanceof TouchEvent && e.touches && e.touches[0]) {
+          document.addEventListener('touchmove', onMove, { passive: false });
+          document.addEventListener('touchend', onEnd);
+        } else {
+          document.addEventListener('mousemove', onMove, { passive: false });
+          document.addEventListener('mouseup', onEnd);
+        }
+      }
+
+      function onMove(e: MouseEvent | TouchEvent) {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        let clientX: number;
+        if (e instanceof TouchEvent && e.touches && e.touches[0]) {
+          clientX = e.touches[0].clientX;
+        } else if (e instanceof MouseEvent) {
+          clientX = e.clientX;
+        } else {
+          return;
+        }
+        
+        updateSlider(clientX);
+      }
+
+      function onEnd() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('touchmove', onMove);
+        document.removeEventListener('mouseup', onEnd);
+        document.removeEventListener('touchend', onEnd);
+      }
+
+      // Mouse events
+      handle.addEventListener('mousedown', onStart);
+      
+      // Touch events
+      handle.addEventListener('touchstart', onStart, { passive: false });
+      
+      // Double tap to jump
+      let lastTap = 0;
+      container.addEventListener('touchend', (e: TouchEvent) => {
+        if (!isDragging && e.changedTouches && e.changedTouches[0]) {
+          const currentTime = new Date().getTime();
+          const tapLength = currentTime - lastTap;
+          if (tapLength < 300 && tapLength > 0) {
+            e.preventDefault();
+            updateSlider(e.changedTouches[0].clientX);
+          }
+          lastTap = currentTime;
+        }
+      }, { passive: false });
+
+      // Initial position
+      requestAnimationFrame(() => {
+        updateSlider(container.getBoundingClientRect().left + container.getBoundingClientRect().width / 2);
+      });
+    });
+  }
+
+  // Initialize when the page loads
+  document.addEventListener('DOMContentLoaded', initBeforeAfter);
+
+  // Re-initialize when Astro view transitions complete
+  document.addEventListener('astro:page-load', initBeforeAfter);
+</script>

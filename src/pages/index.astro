@@ -9,13 +9,14 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Button from '~/components/ui/Button.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Brands from '~/components/widgets/Brands.astro';
-
+import BeforeAfterSlider from '~/components/widgets/BeforeAfterSlider.astro';
 
 const metadata = {
   title: 'Life.Dental - Implant and Cosmetic Dentist in Atlanta',
   description: 'Comprehensive dental care including implants, cosmetic dentistry, and more in Dunwoody, Chamblee, Sandy Springs, Atlanta',
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
@@ -116,8 +117,99 @@ const metadata = {
     ]}
   />
 
+  <BeforeAfterSlider
+  title="Transform Your Smile"
+  subtitle="See the difference we can make"
+  photoPairs={[
+    {
+      beforeImage: "/assets/images/Crowns-Before.JPG",
+      afterImage: "/assets/images/Crowns-After.JPG",
+      label: "Dental Crowns",
+      href: "/crown/"
+    },
+    {
+      beforeImage: "/assets/images/Crowns-Before2.JPG",
+      afterImage: "/assets/images/Crowns-After2.JPG",
+      label: "Porcelain Veneers",
+      href: "/veneers/"
+    },
+    {
+      beforeImage: "/assets/images/Before_Implants.JPG",
+      afterImage: "/assets/images/After_Implants.JPG",
+      label: "Dental Implants",
+      href: "/implant/"
+    }
+  ]}
+/>
+<Features2
+  title="Our Services"
+  subtitle="Comprehensive dental care tailored to your needs"
+  classes={{ container: 'max-w-6xl mx-auto', title: 'text-3xl md:text-4xl font-bold mb-8' }}
+  items={[
+    {
+      title: 'Implant',
+      description: 'Secure your smile with dental implants, the permanent solution for missing teeth that restores function and confidence.',
+      icon: 'healthicons:odontology-implant',
+      callToAction: {
+        text: 'Learn More about Implant',
+        href: '/implant/',
+        alt: 'Implant Dentist near me in Atlanta'
+      }
+    },
+    {
+      title: 'Cosmetic Dentistry',
+      description: 'Enhance your smile with cosmetic dentistry, designed to make a lasting first impression with every interaction.',
+      icon: 'healthicons:dental-hygiene-outline',
+      callToAction: {
+        text: 'Learn More about Cosmetic Dentistry',
+        href: '/cosmetic/',
+        alt: 'Cosmetic Dentist near me in Atlanta'
+      }
+    },
+    {
+      title: 'Crown',
+      description: 'Restore strength and beauty to damaged teeth with custom dental crowns, offering protection and natural appearance.',
+      icon: 'healthicons:heart-outline',
+      callToAction: {
+        text: 'Learn More about Crown',
+        href: '/crown/',
+        alt: 'Crown Dentist near me in Atlanta'
+      }
+    },
+    {
+      title: 'Invisalign',
+      description: 'Straighten your teeth discreetly with Invisalign—clear aligners that fit your lifestyle without the need for braces.',
+      icon: 'healthicons:heartbeat-outline',
+      callToAction: {
+        text: 'Learn More about Invisalign',
+        href: '/invisalign/',
+        alt: 'Invisalign Dentist near me in Atlanta'
+      }
+    },
+    {
+      title: 'Emergency',
+      description: 'Get immediate care for unexpected dental issues with our prompt and reliable emergency services.',
+      icon: 'healthicons:accident-and-emergency-outline',
+      callToAction: {
+        text: 'Learn More about Emergency',
+        href: '/emergency/',
+        alt: 'Emergency Dentist near me in Atlanta'
+      }
+    },
+    {
+      title: 'More',
+      description: 'Discover our full range of dental services, from routine care to advanced treatments, tailored just for you.',
+      icon: 'healthicons:tooth',
+      callToAction: {
+        text: 'View All Services',
+        href: '/services/',
+        alt: 'Dental Services near mein Atlanta'
+      }
+    },
+  ]}
+>
+</Features2>
 
-  <!-- Content Widget **************** -->
   <Content
     isReversed
     classes={{ container: 'max-w-6xl mx-auto' }}
@@ -195,84 +287,11 @@ const metadata = {
     </Fragment>
   </Testimonials>
 
-  <Features2
-  title="Our Services"
-  subtitle="Comprehensive dental care tailored to your needs"
-  classes={{ container: 'max-w-6xl mx-auto', title: 'text-3xl md:text-4xl font-bold mb-8' }}
-  items={[
-    {
-      title: 'Implant',
-      description: 'Secure your smile with dental implants, the permanent solution for missing teeth that restores function and confidence.',
-      icon: 'healthicons:odontology-implant',
-      callToAction: {
-        text: 'Learn More about Implant',
-        href: '/implant/',
-        alt: 'Implant Dentist near me in Atlanta'
-      }
-    },
-    {
-      title: 'Cosmetic Dentistry',
-      description: 'Enhance your smile with cosmetic dentistry, designed to make a lasting first impression with every interaction.',
-      icon: 'healthicons:dental-hygiene-outline',
-      callToAction: {
-        text: 'Learn More about Cosmetic Dentistry',
-        href: '/cosmetic/',
-        alt: 'Cosmetic Dentist near me in Atlanta'
-      }
-    },
-    {
-      title: 'Crown',
-      description: 'Restore strength and beauty to damaged teeth with custom dental crowns, offering protection and natural appearance.',
-      icon: 'healthicons:heart-outline',
-      callToAction: {
-        text: 'Learn More about Crown',
-        href: '/crown/',
-        alt: 'Crown Dentist near me in Atlanta'
-      }
-    },
-    {
-      title: 'Invisalign',
-      description: 'Straighten your teeth discreetly with Invisalign—clear aligners that fit your lifestyle without the need for braces.',
-      icon: 'healthicons:heartbeat-outline',
-      callToAction: {
-        text: 'Learn More about Invisalign',
-        href: '/invisalign/',
-        alt: 'Invisalign Dentist near me in Atlanta'
-      }
-    },
-    {
-      title: 'Emergency',
-      description: 'Get immediate care for unexpected dental issues with our prompt and reliable emergency services.',
-      icon: 'healthicons:accident-and-emergency-outline',
-      callToAction: {
-        text: 'Learn More about Emergency',
-        href: '/emergency/',
-        alt: 'Emergency Dentist near me in Atlanta'
-      }
-    },
-    {
-      title: 'More',
-      description: 'Discover our full range of dental services, from routine care to advanced treatments, tailored just for you.',
-      icon: 'healthicons:tooth',
-      callToAction: {
-        text: 'View All Services',
-        href: '/services/',
-        alt: 'Dental Services near mein Atlanta'
-      }
-    },
-  ]}
-/>
-  
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-
-  <BlogLatestPosts
-    title="Dr. Ketan Ginoya's Blog"
+  <BlogLatestPosts 
+    title="Dr. Ketan Ginoya's Blog" 
     information={`Learn more about dental health, treatments, and tips from Dr. Ketan Ginoya.`}
-  />
+    />
 
-  <!-- FAQs Widget ******************* -->
   <FAQs
     title="Frequently Asked Questions"
     tagline="FAQs"

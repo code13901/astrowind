@@ -3,6 +3,7 @@ import Content from '~/components/widgets/Content2.astro';
 import Hero from '~/components/widgets/Hero2.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import BeforeAfterSlider from '~/components/widgets/BeforeAfterSlider.astro';
 
 const metadata = {
   title: 'Dental Veneers near me',
@@ -19,8 +20,18 @@ const metadata = {
       actions={[{ variant: 'primary', target: '_blank', text: 'Schedule Your Consultation', href: '/contact/' }]}
     />
 
-  <!-- Content Widget **************** -->
+  <!-- Before/After Slider **************** -->
+  <BeforeAfterSlider
+    title="Veneer Transformations"
+    subtitle="See the amazing results of our veneer treatments"
+    photoPairs={[{
+      beforeImage: "/assets/images/Crowns-Before2.JPG",
+      afterImage: "/assets/images/Crowns-After2.JPG",
+      label: "Porcelain Veneers"
+    }]}
+  />
 
+  <!-- Content Widget **************** -->
   <Content
     isReversed={false}  
     items={[
@@ -33,7 +44,7 @@ const metadata = {
         title: 'How Veneers Can Transform Your Smile',
         description:
           'Veneers offer a transformative solution for those looking to enhance their smile. With veneers, you can achieve whiter, straighter, and more evenly shaped teeth. They are also highly resistant to staining, ensuring your smile remains bright for years to come.',
-      },
+      }
     ]}
     image={{
       src: '~/assets/images/dentalveneers.png',
@@ -56,7 +67,6 @@ const metadata = {
   </Content>
 
   <!-- Content Widget **************** -->
-
   <Content
     isAfterContent
     items={[
@@ -77,7 +87,7 @@ const metadata = {
         href:'/whitening/',
         description:
           'While Teeth whitening is effective for brightening your smile, it may not address issues like chipped or misaligned teeth. Veneers offer a comprehensive solution by addressing both the color and shape of your teeth, giving you a complete smile makeover.',
-      },
+      }
     ]}
     image={{
       src: '~/assets/images/veneersvsbonding.png',
@@ -86,12 +96,11 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Veneers vs. Other Cosmetic Dental Procedures</h3>
-      <p>While veneers offer a highly customizable solution for improving your smile, it’s essential to compare them with other cosmetic procedures to find the right fit for your needs:</p>
+      <p>While veneers offer a highly customizable solution for improving your smile, it's essential to compare them with other cosmetic procedures to find the right fit for your needs:</p>
     </Fragment>
   </Content>
 
   <!-- Testimonials Widget **************** -->
-
   <Testimonials
     title="Patient testimonials"
     subtitle="What our patients are saying about their veneer transformations."
@@ -104,12 +113,12 @@ const metadata = {
         },
       },
       {
-        testimonial: `The veneers look so natural, and no one can even tell that they’re not my real teeth. I’m beyond happy with the results!`,
+        testimonial: `The veneers look so natural, and no one can even tell that they're not my real teeth. I'm beyond happy with the results!`,
         name: 'Michael',
         image: {
           alt: 'Michael testimonial about veneers',
         },
-      },
+      }
     ]}
   />
 
