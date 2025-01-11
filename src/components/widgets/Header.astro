@@ -73,6 +73,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
+        <a 
+          href="tel:404-806-9799"
+          class="mr-3 rounded-md py-2 px-3 text-[15px] font-semibold text-white bg-[#6CC799] hover:bg-[#5AB486] transition-all duration-200 shadow-md hover:shadow-lg"
+        >
+          <span class="sr-only">Call us</span>
+          <Icon name="tabler:phone" class="w-5 h-5" />
+        </a>
         <ToggleMenu />
       </div>
     </div>
