@@ -5,10 +5,8 @@
   <div class="form-container-inner">
     <form
       id="contact-form"
-      action="https://api.web3forms.com/submit"
-      method="POST"
-      novalidate
       class="needs-validation"
+      novalidate
     >
       <h3>Contact us today to schedule an appointment</h3>
 
@@ -129,22 +127,35 @@
           .then(async (response) => {
             const json = await response.json();
             if (response.status == 200) {
-              window.location.href = "/success";
-          
+              // Reset form before redirect
+              form.reset();
+              form.classList.remove("was-validated");
+              
+              // Redirect to success page with trailing slash
+              setTimeout(() => {
+                window.location.replace("/success/");
+              }, 100);
             } else {
               console.log(response);
               result.classList.add("text-red-500");
               result.innerHTML = json.message;
+              
+              // Reset form on error after showing message
+              setTimeout(() => {
+                form.reset();
+                form.classList.remove("was-validated");
+                result.style.display = "none";
+              }, 5000);
             }
           })
           .catch((error) => {
             console.log(error);
             result.innerHTML = "Something went wrong!";
-          })
-          .then(function () {
-            form.reset();
-            form.classList.remove("was-validated");
+            
+            // Reset form on error after showing message
             setTimeout(() => {
+              form.reset();
+              form.classList.remove("was-validated");
               result.style.display = "none";
             }, 5000);
           });
